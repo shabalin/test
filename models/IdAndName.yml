@@ -1,0 +1,9 @@
+type: model
+desc: "Name - Description pair"
+fields: 
+    identifier: 
+        type: string
+        example: outline
+    name: 
+        type: string
+        example: Outline

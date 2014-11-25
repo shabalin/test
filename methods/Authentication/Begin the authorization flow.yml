@@ -1,0 +1,31 @@
+method: GET
+path: "/oauth2/authorize"
+desc: The method is used to begin the authorization flow
+request: 
+    params: 
+        client_id: 
+            desc: "your application's client ID."
+            type: string
+            example: 12345
+        response_type: 
+            desc: "Response type. Must be `code` for web application registration."
+            type: string
+            required: true
+            example: code
+        scope: 
+            desc: "Optional comma separated list of scopes. See [scopes]() for more details."
+            type: string
+            example: user
+        state: 
+            desc: "Optional random string used to protect against cross site request forgery attacks."
+            type: string
+            example: random_string
+response: 
+    desc: |
+        If the user chooses to authorize your application, 
+        Iconfinder redirects back to your site at the callback URL you configured for your application when registering it. 
+        The URL will include with an intermediate `code` in the code request parameter as well as the opaque `state` value if provided. 
+        If no `code` parameter is provided, 
+        it means that the user did not choose to authorize your application. 
+        If you supplied a `state` parameter, make sure to validate this to avoid security vulnerabilities.
+    status: 200

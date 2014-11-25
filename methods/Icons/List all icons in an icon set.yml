@@ -1,0 +1,195 @@
+method: GET
+path: "/iconsets/{icon set identifier}/icons"
+path_vars: 
+    icon set identifier: 
+        type: string
+        required: true
+        example: 3258
+desc: "Provides a list of all icons in an icon set sorted descendingly by the popularity of the icons."
+request: 
+    params: 
+        count: 
+            desc: "umber of icons to include in the result. Accepted values are between 1 and 100. Default 10."
+            type: number
+            example: 1
+        after: 
+            desc: "Icon ID of the last icon received. If empty, the count most popular icons are returned."
+            type: number
+            example: 1
+response: 
+    status: 200
+    body: 
+        model: 
+            type: model
+            fields: 
+                total_count: 
+                    type: number
+                    example: 1
+                icons: 
+                    type: Icon
+                    array: true
+            embedded: 
+                Icons: 
+                    type: model
+                    fields: 
+                        raster_sizes: 
+                            type: RasterSizes
+                            array: true
+                        styles: 
+                            type: IdAndName
+                            array: true
+                        tags: 
+                            type: string
+                            array: true
+                            example: interest
+                        icon_id: 
+                            type: number
+                            example: 233366
+                        vector_sizes: 
+                            type: VectorSizes
+                            array: true
+                        is_premium: 
+                            type: boolean
+                            example: true
+                        published_at: 
+                            type: string
+                            example: "2014-01-24T12:00:14.811Z"
+                        containers: 
+                            type: Format
+                            array: true
+                        prices: 
+                            type: Price
+                            array: true
+                        type: 
+                            type: string
+                            example: vector
+                        categories: 
+                            type: IdAndName
+                            array: true
+                RasterSizes: 
+                    type: model
+                    fields: 
+                        size_width: 
+                            type: number
+                            example: 30
+                        size_height: 
+                            type: number
+                            example: 30
+                        formats: 
+                            type: Format
+                            array: true
+                        size: 
+                            type: number
+                            example: 30
+                Formats: 
+                    type: model
+                    fields: 
+                        preview_url: 
+                            type: string
+                            example: "https://cdn1.iconfinder.com/data/icons/streamline-business-finance/60/cell-0-12-30.png"
+                        download_url: 
+                            type: string
+                            example: "/icons/233366/formats/png/30/download"
+                        format: 
+                            type: string
+                            example: png
+                Styles: 
+                    type: model
+                    fields: 
+                        identifier: 
+                            type: string
+                            example: outline
+                        name: 
+                            type: string
+                            example: Outline
+                VectorSizes: 
+                    type: model
+                    fields: 
+                        size_width: 
+                            type: number
+                            example: 60
+                        size_height: 
+                            type: number
+                            example: 60
+                        formats: 
+                            type: IdAndName
+                            array: true
+                        target_sizes: 
+                            type: TargetSizes
+                            array: true
+                        size: 
+                            type: number
+                            example: 60
+                Format: 
+                    type: model
+                    fields: 
+                        download_url: 
+                            type: string
+                            example: "/icons/233366/formats/svg/597373/download"
+                        format: 
+                            type: string
+                            example: svg
+                TargetSizes: 
+                    type: model
+                    fields: 
+                        0: 
+                            type: number
+                            example: 30
+                        1: 
+                            type: number
+                            example: 60
+                        2: 
+                            type: number
+                            example: 120
+                        3: 
+                            type: number
+                            example: 180
+                        4: 
+                            type: number
+                            example: 240
+                        5: 
+                            type: number
+                            example: 480
+                Prices: 
+                    type: model
+                    fields: 
+                        currency: 
+                            type: string
+                            example: USD
+                        price: 
+                            type: number
+                            example: 1
+                        license: 
+                            type: License
+                License: 
+                    type: model
+                    fields: 
+                        url: 
+                            type: string
+                            example: "https://www.iconfinder.com/licenses/basic"
+                        license_id: 
+                            type: number
+                            example: 71
+                        name: 
+                            type: string
+                            example: Basic license
+                        scope: 
+                            type: string
+                            example: free
+errors: 
+    ewf: 
+        status: 500
+        desc: wefwefwef
+        example: |
+            {
+                "code": "not_found",
+                "message": "Not found"
+            }
+    34erg: 
+        status: 420
+        desc: regreg
+        example: |
+            {
+                "code": "not_found",
+                "message": "Not found"
+            }

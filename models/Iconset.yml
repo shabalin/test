@@ -1,0 +1,82 @@
+type: model
+fields: 
+    styles: 
+        type: IdAndName
+        array: true
+    icons_count: 
+        type: number
+        example: 50
+    author: 
+        type: User
+    is_premium: 
+        type: boolean
+        example: true
+    published_at: 
+        type: string
+        example: "2014-05-29T11:38:43.852Z"
+    prices: 
+        type: Price
+        array: true
+    identifier: 
+        type: string
+        example: "coloricons-5"
+    type: 
+        type: string
+        example: vector
+    iconset_id: 
+        type: number
+        example: 5411
+    categories: 
+        type: IdAndName
+        array: true
+    name: 
+        type: string
+        example: Coloricons 5
+embedded: 
+    Author: 
+        type: model
+        fields: 
+            username: 
+                type: string
+                example: deezign
+            user_id: 
+                type: number
+                example: 72067
+            name: 
+                type: string
+                example: Ben Tortorelli
+            company: 
+                type: string
+                example: Pix3lize
+            is_designer: 
+                type: boolean
+                example: true
+            iconsets_count: 
+                type: number
+                example: 34
+    Prices: 
+        type: model
+        fields: 
+            currency: 
+                type: string
+                example: USD
+            price: 
+                type: number
+                example: 15
+            license: 
+                type: License
+    License: 
+        type: model
+        fields: 
+            url: 
+                type: string
+                example: "https://www.iconfinder.com/licenses/basic"
+            license_id: 
+                type: number
+                example: 71
+            name: 
+                type: string
+                example: Basic license
+            scope: 
+                type: string
+                example: free

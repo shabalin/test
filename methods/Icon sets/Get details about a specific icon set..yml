@@ -1,0 +1,12 @@
+method: GET
+path: "/iconsets/{icon set id or identifier}"
+path_vars: 
+    icon set id or identifier: 
+        type: string
+        required: true
+        example: "cat-power-premium"
+desc: "Get details about a specific icon set."
+response: 
+    status: 200
+    body: 
+        type: Iconset

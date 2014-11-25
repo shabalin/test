@@ -1,0 +1,78 @@
+desc: |
+    The Iconfinder REST API 2.0 offers both a public and a private part of the API. 
+    The public part includes the basic functionality, one would experience as a user of Iconfinder without being logged in. 
+    The private part of the API includes access to user information, purchases etc. 
+    depending on the authorization scope.
+    
+    ## OAuth 2.0
+    
+    The Iconfinder API 2.0 currently only supports [OAuth 2.0](http://oauth.net/2/) for authentication. 
+    In order to use OAuth 2.0, you need to [register an API application](https://www.iconfinder.com/account/applications), 
+    which will be assigned a unique client ID and client secret.
+    
+    > It is very important that the client secret is not shared with anyone. 
+    When developing an application that uses OAuth 2.0 you should also make sure to use a strong, 
+    unique password for your Iconfinder account.
+    
+    Once you have registered your application, you need to authorize users to be able to access the Iconfinder API version 2.0 as the specific user. 
+    The authorization flow between your application and Iconfinder depends on the 
+    type of application you're developing. See [web application authorization flow](https://developer.iconfinder.com/api/2.0/authentication.html#web-application-authorization-flow)
+    and [non-web application authorization flow](https://developer.iconfinder.com/api/2.0/authentication.html#non-web-application-authorization-flow) for reference on specific application types.
+    
+    ### Web application authorization flow
+    
+    1. Redirect the user to Iconfinder to authorize your application [Begin the authorization flow](method://Begin the authorization flow)
+       > Web application authorization flows can only be performed for applications registered with a valid callback URL. If you have not provided a callback URL, the authorization endpoint on Iconfinder will display an error to the user.
+    
+    2. Iconfinder redirects back to your site
+       If the user chooses to authorize your application, Iconfinder redirects back to your site at the callback URL you configured for
+       your application when registering it. The URL will include with an intermediate code in the code request parameter as well as the opaque state value if provided. If no code parameter is provided, it means that the user did not choose to authorize your application.
+       If you supplied a state parameter, make sure to validate this to avoid security vulnerabilities.
+    
+    3. Exchange the intermediate code for an access token
+       Once you have the intermediate code, it must be exchanged for an access token that will be used
+       for all authenticated requests. [Obtain access token](method://Obtain access token)
+    
+       Extract intermediate authorization code from the redirect request and obtain access token  
+       
+       **Response**  
+    
+       Upon successful exchange of the intermediate code, Iconfinder returns a JSON response with the access token and token type issued. Access tokens are guaranteed to be alphanumerical strings of 64 byte lengths:
+       ```json
+       {
+          "access_token": "mUZrfE9MJySA1YTyGl9HsMjIypWNtl9jqjpfqxMKakdV00Fkh6C38gZkztrtCzWS",
+          "token_type": "Bearer"
+       }
+       ```
+       
+    4. Hit up some endpoints
+       
+       You are now ready to make requests to the Iconfinder API version 2.0 on behalf of the authorized user. 
+       The quick and dirty approach is to use the access token either as a query parameter:
+    
+       You can pass access token either as a query parameter:
+    
+       ```
+       GET https://api.iconfinder.com/v2/user?access_token=mUZrfE9MJySA1YTyGl9HsMjIypWNtl9jqjpfqxMKakdV00Fkh6C38gZkztrtCzWS
+       ```
+    
+        However, the preferred approach is to supply the access token in the `Authorization` header of your requests, using the **Bearer** token type:
+    
+       ```
+       Authorization: Bearer mUZrfE9MJySA1YTyGl9HsMjIypWNtl9jqjpfqxMKakdV00Fkh6C38gZkztrtCzWS
+       ```
+    
+    ### Non-web application authorization flow
+    
+    As of the current state of the Iconfinder API 2.0, non-web application authorization flows **are not supported**. Please check back soon for an update on this.
+    
+    ### Scopes
+    
+    By default, API applications only have read-only access to public information of authorized users. In order to gain further access, the application must be authorized with one or more scopes.
+    
+    | Scope         | Description           |
+    | ------------- | ------------- |
+    | default     | Read-only access to a user's public information. |
+    | `user`   | Read-only access to a user's private information such as e-mail address etc. |
+    | `purchased`      | Read access to a user's purchased premium resources. Required to be able to download premium icons on behalf of the user. |
+methods: [Begin the authorization flow, Obtain access token]

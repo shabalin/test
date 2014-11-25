@@ -1,0 +1,57 @@
+method: GET
+path: "/iconsets"
+desc: "List all public icon sets in descending order of when they were published."
+response: 
+    status: 200
+    body: 
+        array: true
+        envelope: IconSet Envelope
+        type: Iconset
+examples: 
+    Get first commercial vector iconset: 
+        request: 
+            params: 
+                count: 1
+                vector: true
+                license: commercial
+        response: 
+            body: |
+                {
+                  "total_count" : 5004,
+                  "iconsets" : [ 
+                      {
+                        "styles" : [ {
+                        "identifier" : "outline",
+                        "name" : "Outline"
+                      }],
+                    "icons_count" : 50,
+                    "author" : {
+                      "username" : "deezign",
+                      "user_id" : 72067,
+                      "name" : "Ben Tortorelli",
+                      "company" : "Pix3lize",
+                      "is_designer" : true,
+                      "iconsets_count" : 34
+                    },
+                    "is_premium" : true,
+                    "published_at" : "2014-05-29T11:38:43.852Z",
+                    "prices" : [ {
+                      "currency" : "USD",
+                      "price" : 1,
+                      "license" : {
+                        "url" : "https://www.iconfinder.com/licenses/basic",
+                        "license_id" : 71,
+                        "name" : "Basic license",
+                        "scope" : "free"
+                      }
+                    } ],
+                    "identifier" : "coloricons-5",
+                    "type" : "vector",
+                    "iconset_id" : 5411,
+                    "categories" : [ {
+                      "identifier" : "outline",
+                      "name" : "Outline"
+                    } ],
+                    "name" : "Coloricons 5"
+                  } ]
+                }

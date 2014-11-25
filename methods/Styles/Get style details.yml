@@ -1,0 +1,29 @@
+method: GET
+path: "/styles/{style identifier}"
+path_vars: 
+    style identifier: 
+        type: string
+        required: true
+desc: "Get details about a specific style identified by its `identifier`."
+response: 
+    status: 200
+    body: 
+        model: 
+            type: model
+            fields: 
+                identifier: 
+                    type: string
+                    example: flat
+                name: 
+                    type: string
+                    example: Flat
+examples: 
+    Get flat style details: 
+        path_vars: 
+            style identifier: flat
+        response: 
+            body: |
+                {
+                  "identifier" : "flat",
+                  "name" : "Flat"
+                }

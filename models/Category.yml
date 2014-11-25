@@ -1,0 +1,8 @@
+type: model
+fields: 
+    identifier: 
+        type: string
+        example: halloween
+    name: 
+        type: string
+        example: Halloween

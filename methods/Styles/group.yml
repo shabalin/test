@@ -1,0 +1,5 @@
+desc: |
+    Icons – like any other pieces of design – have very distinct styles and follow trends. Therefore, icons and icon sets on Iconfinder are assigned at least one of a set of predefined styles to make it easier for users to find icons and icon sets that will fit their style needs for a given use case.
+    
+    Styles on Iconfinder are identified in the API by their unique, humanly readable `identifier` rather than a numerical ID.
+methods: [List all styles, Get style details]

@@ -1,0 +1,10 @@
+The following status codes will be sent from the Iconfinder REST API:  
+
+| Status code        | Meaning           | 
+| ------------- |-------------| 
+| `200 OK`    | Indicates that a request completed successfully and the response contains data. | 
+| `304 Not Modified`     | The requested resource has not been modified.      | 
+| `400 Bad Request`     | Client request error as described above.      | 
+| `401 Unauthorized`      | Error indicating that the request was performed with invalid or no authorization information.      | 
+| `403 Forbidden`      | Error indicating that the requesting user has a valid set of credentials but does not have access to the given resource.      | 
+| `404 Not Found`      | Error indicating that the requested resource was not found or, alternatively, is not publicly available.      | 

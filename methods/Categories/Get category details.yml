@@ -1,0 +1,12 @@
+method: GET
+path: "/categories/{category identifier}"
+path_vars: 
+    category identifier: 
+        type: string
+        required: true
+        example: halloween
+desc: "t details about a specific category identified by its identifier."
+response: 
+    status: 200
+    body: 
+        type: Category

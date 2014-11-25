@@ -1,0 +1,55 @@
+method: GET
+path: "/categories"
+desc: "List all categories sorted ascendingly by their identifier."
+request: 
+    params: 
+        count: 
+            desc: "Number of categories to include in the result. Accepted values are between 1 and 100. Default 10."
+            type: number
+            example: 2
+        after: 
+            desc: "`identifier` of the last category received. If empty, the `count` first categories are returned."
+            type: string
+            example: 5
+response: 
+    status: 200
+    body: 
+        model: 
+            type: model
+            fields: 
+                total_count: 
+                    type: number
+                    example: 40
+                categories: 
+                    type: Category
+                    array: true
+            embedded: 
+                Categories: 
+                    type: model
+                    fields: 
+                        identifier: 
+                            type: string
+                            example: abstract
+                        name: 
+                            type: string
+                            example: Abstract
+examples: 
+    Example: 
+        request: 
+            params: 
+                count: 2
+        response: 
+            body: |
+                {
+                    "total_count": 40,
+                    "categories": [
+                        {
+                            "identifier": "abstract",
+                            "name": "Abstract"
+                        },
+                        {
+                            "identifier": "animal",
+                            "name": "Animals"
+                        }
+                    ]
+                }

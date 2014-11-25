@@ -1,0 +1,13 @@
+method: GET
+path: "/v2/users/{userid or username}/iconsets"
+path_vars: 
+    userid or username: 
+        type: string
+        required: true
+desc: "List all public icon sets owned by a specific user in descending order of when they were published."
+response: 
+    status: 200
+    body: 
+        array: true
+        envelope: IconSet Envelope
+        type: Iconset

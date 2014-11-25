@@ -1,0 +1,14 @@
+method: GET
+path: "/authors/{author id}/iconsets"
+path_vars: 
+    author id: 
+        type: string
+        required: true
+        example: 611
+desc: "List all public icon sets owned by a specific author in descending order of when they were published."
+response: 
+    status: 200
+    body: 
+        array: true
+        envelope: IconSet Envelope
+        type: Iconset

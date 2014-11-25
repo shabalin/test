@@ -1,0 +1,13 @@
+method: GET
+path: "/styles/{style identifier}/iconsets"
+path_vars: 
+    style identifier: 
+        type: string
+        required: true
+desc: "List public icon sets of a specific style in descending order of when they were published."
+response: 
+    status: 200
+    body: 
+        array: true
+        envelope: IconSet Envelope
+        type: Iconset

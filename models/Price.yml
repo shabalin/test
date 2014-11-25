@@ -1,0 +1,10 @@
+type: model
+fields: 
+    currency: 
+        type: string
+        example: USD
+    price: 
+        type: number
+        example: 1
+    license: 
+        type: License

@@ -1,0 +1,7 @@
+type: envelope
+fields: 
+    total_count: 
+        type: string
+    iconsets: 
+        type: data_container
+        desc: "Data container (//TODO provide better description)"

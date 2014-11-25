@@ -1,0 +1,26 @@
+method: GET
+path: "/authors/{author id}"
+path_vars: 
+    author id: 
+        desc: Author ID
+        type: string
+        required: true
+        example: 1
+desc: "Get details about a specific author identified by a unique ID."
+request: 
+    body: 
+        type: Author
+response: 
+    status: 200
+examples: 
+    Example 1: 
+        path_vars: 
+            author id: 2
+        request: 
+            body: |
+                {
+                  "author_id" : 2,
+                  "name" : "Everaldo Coelho",
+                  "iconsets_count" : 12,
+                  "website_url" : "http://www.everaldo.com/"
+                }

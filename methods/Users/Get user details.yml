@@ -1,0 +1,37 @@
+method: GET
+path: "/users/{userid or username}"
+path_vars: 
+    userid or username: 
+        type: string
+        required: true
+        example: webalys
+desc: "Get details about a specific user."
+response: 
+    status: 200
+    body: 
+        type: User
+examples: 
+    Example 1: 
+        path_vars: 
+            userid or username: webalys
+        request: 
+            params: 
+                count: 50
+                after: 100
+                premium: qer
+                vector: all
+                license: commercial
+        response: 
+            body: |
+                {
+                  "username" : "webalys",
+                  "user_id" : 40097,
+                  "name" : "Vincent Le Moign",
+                  "iconsets_count" : 74,
+                  "company" : "Webalys",
+                  "is_designer" : true,
+                  "location" : "Hong Kong",
+                  "social_twitter" : "webalys",
+                  "social_dribbble" : "webalys",
+                  "website_url" : "http://www.webalys.com/"
+                }

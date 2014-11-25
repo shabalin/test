@@ -1,0 +1,15 @@
+type: model
+desc: "See [Format Model](model://Format) **bold**"
+fields: 
+    author_id: 
+        type: number
+        example: 2
+    name: 
+        type: string
+        example: Everaldo Coelho
+    iconsets_count: 
+        type: number
+        example: 12
+    website_url: 
+        type: string
+        example: "http://www.everaldo.com/"

@@ -1,0 +1,7 @@
+Most API version 2.0 endpoints expose a modification time of resources in the `Last-Modified` header. 
+The modification time can be used in subsequent requests to the same endpoints using the 
+`If-Modified-Since` conditional header. 
+If the resource has not been modified between requests, 
+the response status code will be `304 Not Modified`.
+
+It is heavily encouraged that server-to-server communications cache responses and use the conditional request mechanisms to reduce the load on the Iconfinder API servers.

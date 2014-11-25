@@ -1,0 +1,10 @@
+method: GET
+path: "/icons/{icon id}"
+path_vars: 
+    icon id: 
+        type: string
+        required: true
+response: 
+    status: 200
+    body: 
+        type: Icon

@@ -1,0 +1,14 @@
+type: model
+fields: 
+    url: 
+        type: string
+        example: "https://www.iconfinder.com/licenses/basic"
+    license_id: 
+        type: number
+        example: 71
+    name: 
+        type: string
+        example: Basic license
+    scope: 
+        type: string
+        example: free

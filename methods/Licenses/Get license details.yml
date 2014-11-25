@@ -1,0 +1,23 @@
+method: GET
+path: "/licenses/{license id}"
+path_vars: 
+    license id: 
+        type: string
+        required: true
+desc: "Get details about a specific license by its unique ID."
+response: 
+    status: 200
+    body: 
+        type: License
+examples: 
+    "Get license with id=71": 
+        path_vars: 
+            license id: 71
+        response: 
+            body: |
+                {
+                  "url" : "https://www.iconfinder.com/licenses/basic",
+                  "license_id" : 71,
+                  "name" : "Basic license",
+                  "scope" : "free"
+                }
