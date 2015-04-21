@@ -1,9 +1,10 @@
 method: GET
-path: "/user/iconsets"
+path: /user/iconsets
 desc: "List all public icon sets owned by the authenticated user in descending order of when they were published."
-response: 
-    status: 200
-    body: 
-        array: true
-        envelope: IconSet Envelope
-        type: Iconset
+responses: 
+    OK: 
+        status: 200
+        body: 
+            array: true
+            envelope: IconSet Envelope
+            type: Iconset

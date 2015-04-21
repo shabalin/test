@@ -5,13 +5,15 @@ path_vars:
         desc: Author ID
         type: string
         required: true
-        example: 1
+        examples: 
+            - 1
 desc: "Get details about a specific author identified by a unique ID."
 request: 
     body: 
         type: Author
-response: 
-    status: 200
+responses: 
+    OK: 
+        status: 200
 examples: 
     Example 1: 
         path_vars: 

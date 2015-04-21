@@ -4,7 +4,8 @@ path_vars:
     icon id: 
         type: string
         required: true
-response: 
-    status: 200
-    body: 
-        type: Icon
+responses: 
+    OK: 
+        status: 200
+        body: 
+            type: Icon

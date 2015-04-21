@@ -1,70 +1,75 @@
 method: GET
-path: "/styles"
+path: /styles
 desc: "List all styles sorted ascendingly by their identifier."
-response: 
-    status: 200
-    body: 
-        model: 
-            type: model
-            fields: 
-                styles: 
-                    type: Styles
-                    array: true
-                total_count: 
-                    type: number
-                    example: 9
-            embedded: 
-                Styles: 
-                    type: model
-                    fields: 
-                        identifier: 
-                            type: string
-                            example: 3d
-                        name: 
-                            type: string
-                            example: 3D
+responses: 
+    OK: 
+        status: 200
+        body: 
+            model: 
+                type: model
+                fields: 
+                    styles: 
+                        type: Styles
+                        array: true
+                    total_count: 
+                        type: number
+                        examples: 
+                            - 9
+                embedded: 
+                    Styles: 
+                        type: model
+                        fields: 
+                            identifier: 
+                                type: string
+                                examples: 
+                                    - 3d
+                            name: 
+                                type: string
+                                examples: 
+                                    - 3D
 examples: 
     List styles: 
-        response: 
-            body: |
-                {
-                    "styles": [
-                        {
-                            "identifier": "3d",
-                            "name": "3D"
-                        },
-                        {
-                            "identifier": "cartoon",
-                            "name": "Cartoon"
-                        },
-                        {
-                            "identifier": "flat",
-                            "name": "Flat"
-                        },
-                        {
-                            "identifier": "glyph",
-                            "name": "Glyph"
-                        },
-                        {
-                            "identifier": "handdrawn",
-                            "name": "Handdrawn"
-                        },
-                        {
-                            "identifier": "outline",
-                            "name": "Outline"
-                        },
-                        {
-                            "identifier": "photorealistic",
-                            "name": "Photorealistic"
-                        },
-                        {
-                            "identifier": "pixel",
-                            "name": "Pixel"
-                        },
-                        {
-                            "identifier": "smooth",
-                            "name": "Smooth"
-                        }
-                    ],
-                    "total_count": 9
-                }
+        responses: 
+            - 
+                body: |
+                    {
+                        "styles": [
+                            {
+                                "identifier": "3d",
+                                "name": "3D"
+                            },
+                            {
+                                "identifier": "cartoon",
+                                "name": "Cartoon"
+                            },
+                            {
+                                "identifier": "flat",
+                                "name": "Flat"
+                            },
+                            {
+                                "identifier": "glyph",
+                                "name": "Glyph"
+                            },
+                            {
+                                "identifier": "handdrawn",
+                                "name": "Handdrawn"
+                            },
+                            {
+                                "identifier": "outline",
+                                "name": "Outline"
+                            },
+                            {
+                                "identifier": "photorealistic",
+                                "name": "Photorealistic"
+                            },
+                            {
+                                "identifier": "pixel",
+                                "name": "Pixel"
+                            },
+                            {
+                                "identifier": "smooth",
+                                "name": "Smooth"
+                            }
+                        ],
+                        "total_count": 9
+                    }

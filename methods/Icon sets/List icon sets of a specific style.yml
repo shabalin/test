@@ -5,9 +5,10 @@ path_vars:
         type: string
         required: true
 desc: "List public icon sets of a specific style in descending order of when they were published."
-response: 
-    status: 200
-    body: 
-        array: true
-        envelope: IconSet Envelope
-        type: Iconset
+responses: 
+    OK: 
+        status: 200
+        body: 
+            array: true
+            envelope: IconSet Envelope
+            type: Iconset

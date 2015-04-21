@@ -1,5 +1,5 @@
 method: POST
-path: "/icons/search"
+path: /icons/search
 desc: "Search through icons by various criteria. The returned list of icons is ordered descendingly by popularity."
 request: 
     params: 
@@ -7,15 +7,18 @@ request:
             desc: Search query
             type: string
             required: true
-            example: facebook
+            examples: 
+                - facebook
         count: 
             desc: "Number of icons to include in the result. Accepted values are between 1 and 100. Default 10."
             type: number
-            example: 1
+            examples: 
+                - 1
         offset: 
             desc: "Result offset. Starts from 0, resulting in the first count icons being returned."
             type: number
-            example: 1
+            examples: 
+                - 1
         premium: 
             desc: |
                 Filter premium icons.
@@ -41,7 +44,8 @@ request:
                 `1` or `true`
                 Only include vector icons in the search result.
             type: string
-            example: all
+            examples: 
+                - all
         license: 
             desc: |
                 Filter by license scope.
@@ -58,21 +62,25 @@ request:
                 Minimum icon size to include in search result.  
                 Default `0`.
             type: number
-            example: 24
+            examples: 
+                - 24
         maximum_size: 
             desc: |
                 Maximum icon size to include in search result.  
                 Default `512`.
             type: number
-            example: 128
+            examples: 
+                - 128
         category: 
             desc: icon category
             type: string
-            example: internet
+            examples: 
+                - internet
         style: 
             desc: icon style
             type: string
-            example: contemporary
+            examples: 
+                - contemporary
     body: 
         desc: cool sdqwed
         model: 
@@ -82,16 +90,20 @@ request:
                     type: unknown
                 favorited: 
                     type: boolean
-                    example: false
+                    examples: 
+                        - "false"
                 truncated: 
                     type: boolean
-                    example: false
+                    examples: 
+                        - "false"
                 created_at: 
                     type: string
-                    example: "Wed Aug 29 17:12:58 +0000 2012"
+                    examples: 
+                        - "Wed Aug 29 17:12:58 +0000 2012"
                 id_str: 
                     type: string
-                    example: 240859602684612608
+                    examples: 
+                        - 240859602684612608
                 entities: 
                     type: unknown
                 in_reply_to_user_id_str: 
@@ -100,23 +112,28 @@ request:
                     type: unknown
                 text: 
                     type: string
-                    example: "Introducing the Twitter Certified Products Program: https://t.co/MjJ8xAnT"
+                    examples: 
+                        - "Introducing the Twitter Certified Products Program: https://t.co/MjJ8xAnT"
                 retweet_count: 
                     type: number
-                    example: 121
+                    examples: 
+                        - 121
                 in_reply_to_status_id_str: 
                     type: unknown
                 id: 
                     type: number
-                    example: 240859602684612600
+                    examples: 
+                        - 240859602684612600
                 geo: 
                     type: unknown
                 retweeted: 
                     type: boolean
-                    example: false
+                    examples: 
+                        - "false"
                 possibly_sensitive: 
                     type: boolean
-                    example: false
+                    examples: 
+                        - "false"
                 in_reply_to_user_id: 
                     type: unknown
                 place: 
@@ -127,7 +144,8 @@ request:
                     type: unknown
                 source: 
                     type: string
-                    example: '<a href="http://sites.google.com/site/yorufukurou/" rel="nofollow">YoruFukurou</a>'
+                    examples: 
+                        - '<a href="http://sites.google.com/site/yorufukurou/" rel="nofollow">YoruFukurou</a>'
                 in_reply_to_status_id: 
                     type: unknown
             embedded: 
@@ -148,134 +166,174 @@ request:
                     fields: 
                         expanded_url: 
                             type: string
-                            example: "https://dev.twitter.com/blog/twitter-certified-products"
+                            examples: 
+                                - "https://dev.twitter.com/blog/twitter-certified-products"
                         url: 
                             type: string
-                            example: "https://t.co/MjJ8xAnT"
+                            examples: 
+                                - "https://t.co/MjJ8xAnT"
                         indices: 
                             type: number
                             array: true
-                            example: 52
+                            examples: 
+                                - 52
                         display_url: 
                             type: string
-                            example: "dev.twitter.com/blog/twitter-c…"
+                            examples: 
+                                - "dev.twitter.com/blog/twitter-c…"
                 User: 
                     type: model
                     fields: 
                         profile_sidebar_fill_color: 
                             type: string
-                            example: DDEEF6
+                            examples: 
+                                - DDEEF6
                         profile_sidebar_border_color: 
                             type: string
-                            example: C0DEED
+                            examples: 
+                                - C0DEED
                         profile_background_tile: 
                             type: boolean
-                            example: false
+                            examples: 
+                                - "false"
                         name: 
                             type: string
-                            example: Twitter API
+                            examples: 
+                                - Twitter API
                         profile_image_url: 
                             type: string
-                            example: "http://a0.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png"
+                            examples: 
+                                - "http://a0.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png"
                         created_at: 
                             type: string
-                            example: "Wed May 23 06:01:13 +0000 2007"
+                            examples: 
+                                - "Wed May 23 06:01:13 +0000 2007"
                         location: 
                             type: string
-                            example: "San Francisco, CA"
+                            examples: 
+                                - "San Francisco, CA"
                         follow_request_sent: 
                             type: boolean
-                            example: false
+                            examples: 
+                                - "false"
                         profile_link_color: 
                             type: string
-                            example: 0084B4
+                            examples: 
+                                - 0084B4
                         is_translator: 
                             type: boolean
-                            example: false
+                            examples: 
+                                - "false"
                         id_str: 
                             type: string
-                            example: 6253282
+                            examples: 
+                                - 6253282
                         entities: 
                             type: unknown
                         default_profile: 
                             type: boolean
-                            example: true
+                            examples: 
+                                - "true"
                         contributors_enabled: 
                             type: boolean
-                            example: true
+                            examples: 
+                                - "true"
                         favourites_count: 
                             type: number
-                            example: 24
+                            examples: 
+                                - 24
                         url: 
                             type: string
-                            example: "http://dev.twitter.com"
+                            examples: 
+                                - "http://dev.twitter.com"
                         profile_image_url_https: 
                             type: string
-                            example: "https://si0.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png"
+                            examples: 
+                                - "https://si0.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png"
                         utc_offset: 
                             type: number
-                            example: -28800
+                            examples: 
+                                - "-28800"
                         id: 
                             type: number
-                            example: 6253282
+                            examples: 
+                                - 6253282
                         profile_use_background_image: 
                             type: boolean
-                            example: true
+                            examples: 
+                                - "true"
                         listed_count: 
                             type: number
-                            example: 10775
+                            examples: 
+                                - 10775
                         profile_text_color: 
                             type: string
-                            example: 333333
+                            examples: 
+                                - 333333
                         lang: 
                             type: string
-                            example: en
+                            examples: 
+                                - en
                         followers_count: 
                             type: number
-                            example: 1212864
+                            examples: 
+                                - 1212864
                         protected: 
                             type: boolean
-                            example: false
+                            examples: 
+                                - "false"
                         notifications: 
                             type: unknown
                         profile_background_image_url_https: 
                             type: string
-                            example: "https://si0.twimg.com/images/themes/theme1/bg.png"
+                            examples: 
+                                - "https://si0.twimg.com/images/themes/theme1/bg.png"
                         profile_background_color: 
                             type: string
-                            example: C0DEED
+                            examples: 
+                                - C0DEED
                         verified: 
                             type: boolean
-                            example: true
+                            examples: 
+                                - "true"
                         geo_enabled: 
                             type: boolean
-                            example: true
+                            examples: 
+                                - "true"
                         time_zone: 
                             type: string
-                            example: "Pacific Time (US & Canada)"
+                            examples: 
+                                - "Pacific Time (US & Canada)"
                         description: 
                             type: string
-                            example: "The Real Twitter API. I tweet about API changes, service issues and happily answer questions about Twitter and our API. Don't get an answer? It's on my website."
+                            examples: 
+                                - "The Real Twitter API. I tweet about API changes, service issues and happily answer questions about Twitter and our API. Don't get an answer? It's on my website."
                         default_profile_image: 
                             type: boolean
-                            example: false
+                            examples: 
+                                - "false"
                         profile_background_image_url: 
                             type: string
-                            example: "http://a0.twimg.com/images/themes/theme1/bg.png"
+                            examples: 
+                                - "http://a0.twimg.com/images/themes/theme1/bg.png"
                         statuses_count: 
                             type: number
-                            example: 3333
+                            examples: 
+                                - 3333
                         friends_count: 
                             type: number
-                            example: 31
+                            examples: 
+                                - 31
                         following: 
                             type: unknown
                         show_all_inline_media: 
                             type: boolean
-                            example: false
+                            examples: 
+                                - "false"
                         screen_name: 
                             type: string
-                            example: twitterapi
+                            examples: 
+                                - twitterapi
                 Entities 2: 
                     type: model
                     fields: 
@@ -296,30 +354,33 @@ request:
                             type: unknown
                         url: 
                             type: string
-                            example: "http://dev.twitter.com"
+                            examples: 
+                                - "http://dev.twitter.com"
                         indices: 
                             type: number
                             array: true
-                            example: 0
+                            examples: 
+                                - 0
                 Description: 
                     type: model
                     fields: 
                         urls: 
                             type: unknown
                             array: true
-response: 
-    status: 200
-    body: 
-        model: 
-            type: model
-            fields: 
-                total_count: 
-                    type: string
-                    example: 442
-                icons: 
-                    type: Icon
-                    array: true
-errors: 
+responses: 
+    OK: 
+        status: 200
+        body: 
+            model: 
+                type: model
+                fields: 
+                    total_count: 
+                        type: string
+                        examples: 
+                            - 442
+                    icons: 
+                        type: Icon
+                        array: true
     123: 
-        status: 312
         desc: 123
+        status: 312

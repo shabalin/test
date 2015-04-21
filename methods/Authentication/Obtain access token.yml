@@ -1,5 +1,5 @@
 method: GET
-path: "/oauth2/token"
+path: /oauth2/token
 desc: "Once you have the intermediate code, it must be exchanged for an access token that will be used for all authenticated requests. Access tokens are obtained at the following URL:"
 request: 
     params: 
@@ -21,17 +21,21 @@ request:
             desc: "Grant type. Must be authorization_code to indicate that the token is granted based on an `authorization code`."
             type: string
             required: true
-            example: authorization code
-response: 
-    desc: "pon successful exchange of the intermediate code, Iconfinder returns a JSON response with the access token and token type issued. Access tokens are guaranteed to be alphanumerical strings of 64 byte lengths:"
-    status: 200
-    body: 
-        model: 
-            type: model
-            fields: 
-                access_token: 
-                    type: string
-                    example: mUZrfE9MJySA1YTyGl9HsMjIypWNtl9jqjpfqxMKakdV00Fkh6C38gZkztrtCzWS
-                token_type: 
-                    type: string
-                    example: Bearer
+            examples: 
+                - authorization code
+responses: 
+    OK: 
+        desc: "pon successful exchange of the intermediate code, Iconfinder returns a JSON response with the access token and token type issued. Access tokens are guaranteed to be alphanumerical strings of 64 byte lengths:"
+        status: 200
+        body: 
+            model: 
+                type: model
+                fields: 
+                    access_token: 
+                        type: string
+                        examples: 
+                            - mUZrfE9MJySA1YTyGl9HsMjIypWNtl9jqjpfqxMKakdV00Fkh6C38gZkztrtCzWS
+                    token_type: 
+                        type: string
+                        examples: 
+                            - Bearer

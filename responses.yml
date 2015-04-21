@@ -15,56 +15,67 @@ desc: |
         "message": "Not found"
     }
     ```
-errors: 
+responses: 
     bad_request: 
-        status: 400
         desc: "The request was malformed."
-        type: Error model
-        applied_to_all: true
-        example: |
-            {
-                "code": "bad_request",
-                "message": "The request was malformed."
-            }
-    "invalid_<parameter>": 
         status: 400
+        body: 
+            type: Error model
+            examples: 
+                - 
+                    example: |
+                        {
+                            "code": "bad_request",
+                            "message": "The request was malformed."
+                        }
+        applied_to_all: true
+    "invalid_<parameter>": 
         desc: |
             The request was malformed. The query parameter 
             `parameter` contains an invalid value.
-        type: Error model
+        status: 400
+        body: 
+            type: Error model
         applied_to_all: true
     bad_credentials: 
-        status: 401
         desc: "Invalid credentials were used to authenticate the request."
-        type: Error model
+        status: 401
+        body: 
+            type: Error model
         applied_to_all: true
     permission_denied: 
-        status: 403
         desc: "Permission to the requested resource was denied. This often means that a request should have been authenticated but wasn't. dispatched to clean up the mess immediately!"
-        type: Error model
+        status: 403
+        body: 
+            type: Error model
         applied_to_all: true
     insufficient_permissions: 
-        status: 403
         desc: "The authentication used does not have the required permissions to access the requested resource. Make sure the authentication was performed with the necessary scope."
-        type: Error model
+        status: 403
+        body: 
+            type: Error model
         applied_to_all: true
     not_purchased: 
-        status: 403
         desc: "The premium resource you're trying to access has not been purchased by the authenticated user."
-        type: Error model
+        status: 403
+        body: 
+            type: Error model
         applied_to_all: true
     not_found: 
-        status: 404
         desc: "The requested resource does not exist or is not publicly available."
-        type: Error model
+        status: 404
+        body: 
+            type: Error model
         applied_to_all: true
     rate_limit_exceeded: 
-        status: 429
         desc: "API request rate limit exceeded. See `rate limiting`."
-        type: Error model
+        status: 429
+        body: 
+            type: Error model
         applied_to_all: true
     server_error: 
-        status: 500
         desc: "An internal server error occured. This shouldn't happen, and robots will be dispatched to deal with it immediately."
-        type: Error model
+        status: 500
+        body: 
+            type: Error model
         applied_to_all: true

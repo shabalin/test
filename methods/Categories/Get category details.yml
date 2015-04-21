@@ -4,9 +4,11 @@ path_vars:
     category identifier: 
         type: string
         required: true
-        example: halloween
+        examples: 
+            - halloween
 desc: "t details about a specific category identified by its identifier."
-response: 
-    status: 200
-    body: 
-        type: Category
+responses: 
+    OK: 
+        status: 200
+        body: 
+            type: Category

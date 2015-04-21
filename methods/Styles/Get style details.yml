@@ -5,25 +5,29 @@ path_vars:
         type: string
         required: true
 desc: "Get details about a specific style identified by its `identifier`."
-response: 
-    status: 200
-    body: 
-        model: 
-            type: model
-            fields: 
-                identifier: 
-                    type: string
-                    example: flat
-                name: 
-                    type: string
-                    example: Flat
+responses: 
+    OK: 
+        status: 200
+        body: 
+            model: 
+                type: model
+                fields: 
+                    identifier: 
+                        type: string
+                        examples: 
+                            - flat
+                    name: 
+                        type: string
+                        examples: 
+                            - Flat
 examples: 
     Get flat style details: 
         path_vars: 
             style identifier: flat
-        response: 
-            body: |
-                {
-                  "identifier" : "flat",
-                  "name" : "Flat"
-                }
+        responses: 
+            - 
+                body: |
+                    {
+                      "identifier" : "flat",
+                      "name" : "Flat"
+                    }

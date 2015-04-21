@@ -4,11 +4,13 @@ path_vars:
     category identifier: 
         type: string
         required: true
-        example: shopping
+        examples: 
+            - shopping
 desc: "List public icon sets in a category in descending order of when they were published."
-response: 
-    status: 200
-    body: 
-        array: true
-        envelope: IconSet Envelope
-        type: Iconset
+responses: 
+    OK: 
+        status: 200
+        body: 
+            array: true
+            envelope: IconSet Envelope
+            type: Iconset
