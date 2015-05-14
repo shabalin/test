@@ -25,6 +25,8 @@ examples:
                 license: commercial
         responses: 
             - 
+                response_name: OK
+                status: 200
                 body: |
                     {
                       "username" : "webalys",

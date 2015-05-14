@@ -31,6 +31,8 @@ examples:
     List styles: 
         responses: 
             - 
+                response_name: OK
+                status: 200
                 body: |
                     {
                         "styles": [

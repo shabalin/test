@@ -16,6 +16,8 @@ examples:
             license id: 71
         responses: 
             - 
+                response_name: OK
+                status: 200
                 body: |
                     {
                       "url" : "https://www.iconfinder.com/licenses/basic",

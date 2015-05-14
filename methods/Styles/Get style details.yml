@@ -26,6 +26,8 @@ examples:
             style identifier: flat
         responses: 
             - 
+                response_name: OK
+                status: 200
                 body: |
                     {
                       "identifier" : "flat",

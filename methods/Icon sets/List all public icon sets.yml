@@ -17,6 +17,8 @@ examples:
                 license: commercial
         responses: 
             - 
+                response_name: OK
+                status: 200
                 body: |
                     {
                       "total_count" : 5004,
