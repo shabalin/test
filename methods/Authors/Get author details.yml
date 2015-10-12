@@ -2,8 +2,8 @@ method: GET
 path: "/authors/{author id}"
 path_vars: 
     author id: 
-        desc: Author ID
         type: string
+        desc: Author ID
         required: true
         examples: 
             - 1

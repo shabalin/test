@@ -1,0 +1,299 @@
+name: SearchforiconsRequest
+type: object
+desc: ewf
+props: 
+    coordinates: 
+        type: unknown
+    favorited: 
+        type: boolean
+        examples: 
+            - "false"
+    truncated: 
+        type: boolean
+        examples: 
+            - "false"
+    created_at: 
+        type: string
+        examples: 
+            - "Wed Aug 29 17:12:58 +0000 2012"
+    id_str: 
+        type: string
+        examples: 
+            - 240859602684612608
+    entities: 
+        type: unknown
+    in_reply_to_user_id_str: 
+        type: unknown
+    contributors: 
+        type: unknown
+    text: 
+        type: string
+        examples: 
+            - "Introducing the Twitter Certified Products Program: https://t.co/MjJ8xAnT"
+    retweet_count: 
+        type: number
+        examples: 
+            - 121
+    in_reply_to_status_id_str: 
+        type: unknown
+    id: 
+        type: number
+        examples: 
+            - 240859602684612600
+    geo: 
+        type: unknown
+    retweeted: 
+        type: boolean
+        examples: 
+            - "false"
+    possibly_sensitive: 
+        type: boolean
+        examples: 
+            - "false"
+    in_reply_to_user_id: 
+        type: unknown
+    place: 
+        type: unknown
+    user: 
+        type: unknown
+    in_reply_to_screen_name: 
+        type: unknown
+    source: 
+        type: string
+        examples: 
+            - '<a href="http://sites.google.com/site/yorufukurou/" rel="nofollow">YoruFukurou</a>'
+    in_reply_to_status_id: 
+        type: unknown
+nested: 
+    Entities: 
+        name: Entities
+        type: object
+        props: 
+            urls: 
+                type: array
+                items:
+                    type: unknown
+            hashtags: 
+                type: array
+                items:
+                    type: unknown
+            user_mentions: 
+                type: array
+                items:
+                    type: unknown
+    Urls: 
+        name: Urls
+        type: object
+        props: 
+            expanded_url: 
+                type: string
+                examples: 
+                    - "https://dev.twitter.com/blog/twitter-certified-products"
+            url: 
+                type: string
+                examples: 
+                    - "https://t.co/MjJ8xAnT"
+            indices: 
+                type: array
+                examples: 
+                    - 52
+                items:
+                    type: number
+            display_url: 
+                type: string
+                examples: 
+                    - "dev.twitter.com/blog/twitter-c…"
+    User: 
+        name: User
+        type: object
+        props: 
+            profile_sidebar_fill_color: 
+                type: string
+                examples: 
+                    - DDEEF6
+            profile_sidebar_border_color: 
+                type: string
+                examples: 
+                    - C0DEED
+            profile_background_tile: 
+                type: boolean
+                examples: 
+                    - "false"
+            name: 
+                type: string
+                examples: 
+                    - Twitter API
+            profile_image_url: 
+                type: string
+                examples: 
+                    - "http://a0.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png"
+            created_at: 
+                type: string
+                examples: 
+                    - "Wed May 23 06:01:13 +0000 2007"
+            location: 
+                type: string
+                examples: 
+                    - "San Francisco, CA"
+            follow_request_sent: 
+                type: boolean
+                examples: 
+                    - "false"
+            profile_link_color: 
+                type: string
+                examples: 
+                    - 0084B4
+            is_translator: 
+                type: boolean
+                examples: 
+                    - "false"
+            id_str: 
+                type: string
+                examples: 
+                    - 6253282
+            entities: 
+                type: unknown
+            default_profile: 
+                type: boolean
+                examples: 
+                    - "true"
+            contributors_enabled: 
+                type: boolean
+                examples: 
+                    - "true"
+            favourites_count: 
+                type: number
+                examples: 
+                    - 24
+            url: 
+                type: string
+                examples: 
+                    - "http://dev.twitter.com"
+            profile_image_url_https: 
+                type: string
+                examples: 
+                    - "https://si0.twimg.com/profile_images/2284174872/7df3h38zabcvjylnyfe3_normal.png"
+            utc_offset: 
+                type: number
+                examples: 
+                    - "-28800"
+            id: 
+                type: number
+                examples: 
+                    - 6253282
+            profile_use_background_image: 
+                type: boolean
+                examples: 
+                    - "true"
+            listed_count: 
+                type: number
+                examples: 
+                    - 10775
+            profile_text_color: 
+                type: string
+                examples: 
+                    - 333333
+            lang: 
+                type: string
+                examples: 
+                    - en
+            followers_count: 
+                type: number
+                examples: 
+                    - 1212864
+            protected: 
+                type: boolean
+                examples: 
+                    - "false"
+            notifications: 
+                type: unknown
+            profile_background_image_url_https: 
+                type: string
+                examples: 
+                    - "https://si0.twimg.com/images/themes/theme1/bg.png"
+            profile_background_color: 
+                type: string
+                examples: 
+                    - C0DEED
+            verified: 
+                type: boolean
+                examples: 
+                    - "true"
+            geo_enabled: 
+                type: boolean
+                examples: 
+                    - "true"
+            time_zone: 
+                type: string
+                examples: 
+                    - "Pacific Time (US & Canada)"
+            description: 
+                type: string
+                examples: 
+                    - "The Real Twitter API. I tweet about API changes, service issues and happily answer questions about Twitter and our API. Don't get an answer? It's on my website."
+            default_profile_image: 
+                type: boolean
+                examples: 
+                    - "false"
+            profile_background_image_url: 
+                type: string
+                examples: 
+                    - "http://a0.twimg.com/images/themes/theme1/bg.png"
+            statuses_count: 
+                type: number
+                examples: 
+                    - 3333
+            friends_count: 
+                type: number
+                examples: 
+                    - 31
+            following: 
+                type: unknown
+            show_all_inline_media: 
+                type: boolean
+                examples: 
+                    - "false"
+            screen_name: 
+                type: string
+                examples: 
+                    - twitterapi
+    Entities 2: 
+        name: Entities 2
+        type: object
+        props: 
+            url: 
+                type: unknown
+            description: 
+                type: unknown
+    Url: 
+        name: Url
+        type: object
+        props: 
+            urls: 
+                type: array
+                items:
+                    type: unknown
+    Urls 2: 
+        name: Urls 2
+        type: object
+        props: 
+            expanded_url: 
+                type: unknown
+            url: 
+                type: string
+                examples: 
+                    - "http://dev.twitter.com"
+            indices: 
+                type: array
+                examples: 
+                    - 0
+                items:
+                    type: number
+    Description: 
+        name: Description
+        type: object
+        props: 
+            urls: 
+                type: array
+                items:
+                    type: unknown

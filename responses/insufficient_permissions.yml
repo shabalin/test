@@ -1,0 +1,5 @@
+desc: "The authentication used does not have the required permissions to access the requested resource. Make sure the authentication was performed with the necessary scope."
+status: 403
+applied_to_all: true
+body: 
+    type: Error model

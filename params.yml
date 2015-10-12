@@ -1,15 +1,16 @@
 params: 
     count: 
+        type: number
         desc: "Number of icon sets to include in the result. Accepted values are between 1 and 100. Default 10."
-        type: number
         examples: 
-            - 50
+            - 50.0
     after: 
-        desc: "Icon set ID of the last icon set received. If empty, the `count` most recently published icon sets are returned."
         type: number
+        desc: "Icon set ID of the last icon set received. If empty, the `count` most recently published icon sets are returned."
         examples: 
-            - 100
+            - 100.0
     premium: 
+        type: string
         desc: |
             Filter premium icon sets.
             
@@ -19,10 +20,10 @@ params:
             Only include icon sets that are not premium, ie. may require purchasing a license for specific use cases but are not sold directly on the Iconfinder marketplace.  
             `1` or `true`
             Only include premium icon sets, that are sold directly on the Iconfinder marketplace.
-        type: string
         examples: 
             - qer
     vector: 
+        type: string
         desc: |
             Filter vector icon sets.
             
@@ -32,10 +33,10 @@ params:
             Only include raster icon sets in the result.  
             `1` or `true`
             Only include vector icon sets in the result.
-        type: string
         examples: 
             - all
     license: 
+        type: string
         desc: |
             Filter by license scope.
             
@@ -45,6 +46,5 @@ params:
             Only include icon sets that can be used commercially, but may require attribution or be restricted by other licensing concerns.  
             `commercial-nonattribution`
             Only include icon sets that be used commercially without any attribution requirements.
-        type: string
         examples: 
             - commercial

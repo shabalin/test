@@ -1,0 +1,11 @@
+name: Error model
+type: object
+props: 
+    code: 
+        type: string
+        examples: 
+            - not_found
+    message: 
+        type: string
+        examples: 
+            - Not found

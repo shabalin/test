@@ -10,42 +10,39 @@ desc: "Provides a list of all icons in an icon set sorted descendingly by the po
 request: 
     params: 
         count: 
+            type: number
             desc: "umber of icons to include in the result. Accepted values are between 1 and 100. Default 10."
-            type: number
             examples: 
-                - 1
+                - 1.0
         after: 
-            desc: "Icon ID of the last icon received. If empty, the count most popular icons are returned."
             type: number
+            desc: "Icon ID of the last icon received. If empty, the count most popular icons are returned."
             examples: 
-                - 1
+                - 1.0
 responses: 
     OK: 
         status: 200
         body: 
-            model: 
-                type: model
-                fields: 
+            typeDef: 
+                type: object
+                props: 
                     total_count: 
                         type: number
                         examples: 
                             - 1
                     icons: 
                         type: Icon
-                        array: true
-                embedded: 
+                nested: 
                     Icons: 
-                        type: model
-                        fields: 
+                        name: Icons
+                        type: object
+                        props: 
                             raster_sizes: 
                                 type: RasterSizes
-                                array: true
                             styles: 
                                 type: IdAndName
-                                array: true
                             tags: 
                                 type: string
-                                array: true
                                 examples: 
                                     - interest
                             icon_id: 
@@ -54,7 +51,6 @@ responses:
                                     - 233366
                             vector_sizes: 
                                 type: VectorSizes
-                                array: true
                             is_premium: 
                                 type: boolean
                                 examples: 
@@ -65,20 +61,18 @@ responses:
                                     - "2014-01-24T12:00:14.811Z"
                             containers: 
                                 type: Format
-                                array: true
                             prices: 
                                 type: Price
-                                array: true
                             type: 
                                 type: string
                                 examples: 
                                     - vector
                             categories: 
                                 type: IdAndName
-                                array: true
                     RasterSizes: 
-                        type: model
-                        fields: 
+                        name: RasterSizes
+                        type: object
+                        props: 
                             size_width: 
                                 type: number
                                 examples: 
@@ -89,14 +83,14 @@ responses:
                                     - 30
                             formats: 
                                 type: Format
-                                array: true
                             size: 
                                 type: number
                                 examples: 
                                     - 30
                     Formats: 
-                        type: model
-                        fields: 
+                        name: Formats
+                        type: object
+                        props: 
                             preview_url: 
                                 type: string
                                 examples: 
@@ -110,8 +104,9 @@ responses:
                                 examples: 
                                     - png
                     Styles: 
-                        type: model
-                        fields: 
+                        name: Styles
+                        type: object
+                        props: 
                             identifier: 
                                 type: string
                                 examples: 
@@ -121,8 +116,9 @@ responses:
                                 examples: 
                                     - Outline
                     VectorSizes: 
-                        type: model
-                        fields: 
+                        name: VectorSizes
+                        type: object
+                        props: 
                             size_width: 
                                 type: number
                                 examples: 
@@ -133,17 +129,16 @@ responses:
                                     - 60
                             formats: 
                                 type: IdAndName
-                                array: true
                             target_sizes: 
                                 type: TargetSizes
-                                array: true
                             size: 
                                 type: number
                                 examples: 
                                     - 60
                     Format: 
-                        type: model
-                        fields: 
+                        name: Format
+                        type: object
+                        props: 
                             download_url: 
                                 type: string
                                 examples: 
@@ -153,8 +148,9 @@ responses:
                                 examples: 
                                     - svg
                     TargetSizes: 
-                        type: model
-                        fields: 
+                        name: TargetSizes
+                        type: object
+                        props: 
                             0: 
                                 type: number
                                 examples: 
@@ -180,8 +176,9 @@ responses:
                                 examples: 
                                     - 480
                     Prices: 
-                        type: model
-                        fields: 
+                        name: Prices
+                        type: object
+                        props: 
                             currency: 
                                 type: string
                                 examples: 
@@ -193,8 +190,9 @@ responses:
                             license: 
                                 type: License
                     License: 
-                        type: model
-                        fields: 
+                        name: License
+                        type: object
+                        props: 
                             url: 
                                 type: string
                                 examples: 
@@ -222,6 +220,7 @@ responses:
                             "code": "not_found",
                             "message": "Not found"
                         }
+
     34erg: 
         desc: regreg
         status: 420
@@ -233,3 +232,4 @@ responses:
                             "code": "not_found",
                             "message": "Not found"
                         }
+

@@ -4,22 +4,23 @@ desc: "Search through icons by various criteria. The returned list of icons is o
 request: 
     params: 
         query: 
-            desc: Search query
             type: string
+            desc: Search query
             required: true
             examples: 
                 - facebook
         count: 
+            type: number
             desc: "Number of icons to include in the result. Accepted values are between 1 and 100. Default 10."
-            type: number
             examples: 
-                - 1
+                - 1.0
         offset: 
-            desc: "Result offset. Starts from 0, resulting in the first count icons being returned."
             type: number
+            desc: "Result offset. Starts from 0, resulting in the first count icons being returned."
             examples: 
-                - 1
+                - 1.0
         premium: 
+            type: string
             desc: |
                 Filter premium icons.
                 
@@ -32,8 +33,8 @@ request:
                 `1` or `true`
                 
                 Only include premium icons, that are sold directly on the Iconfinder marketplace.
-            type: string
         vector: 
+            type: string
             desc: |
                 Filter vector icons.
                 
@@ -43,10 +44,10 @@ request:
                 Only include raster icons in the search result.  
                 `1` or `true`
                 Only include vector icons in the search result.
-            type: string
             examples: 
                 - all
         license: 
+            type: string
             desc: |
                 Filter by license scope.
                 
@@ -56,36 +57,35 @@ request:
                 Only include icons that can be used commercially, but may require attribution or be restricted by other licensing concerns.  
                 `commercial-nonattribution`
                 Only include icons that be used commercially without any attribution requirements.
-            type: string
         minimum_size: 
+            type: number
             desc: |
                 Minimum icon size to include in search result.  
                 Default `0`.
-            type: number
             examples: 
-                - 24
+                - 24.0
         maximum_size: 
+            type: number
             desc: |
                 Maximum icon size to include in search result.  
                 Default `512`.
-            type: number
             examples: 
-                - 128
+                - 128.0
         category: 
-            desc: icon category
             type: string
+            desc: icon category
             examples: 
                 - internet
         style: 
-            desc: icon style
             type: string
+            desc: icon style
             examples: 
                 - contemporary
     body: 
         desc: cool sdqwed
-        model: 
-            type: model
-            fields: 
+        typeDef: 
+            type: object
+            props: 
                 coordinates: 
                     type: unknown
                 favorited: 
@@ -148,22 +148,21 @@ request:
                         - '<a href="http://sites.google.com/site/yorufukurou/" rel="nofollow">YoruFukurou</a>'
                 in_reply_to_status_id: 
                     type: unknown
-            embedded: 
+            nested: 
                 Entities: 
-                    type: model
-                    fields: 
+                    name: Entities
+                    type: object
+                    props: 
                         urls: 
                             type: unknown
-                            array: true
                         hashtags: 
                             type: unknown
-                            array: true
                         user_mentions: 
                             type: unknown
-                            array: true
                 Urls: 
-                    type: model
-                    fields: 
+                    name: Urls
+                    type: object
+                    props: 
                         expanded_url: 
                             type: string
                             examples: 
@@ -174,7 +173,6 @@ request:
                                 - "https://t.co/MjJ8xAnT"
                         indices: 
                             type: number
-                            array: true
                             examples: 
                                 - 52
                         display_url: 
@@ -182,8 +180,9 @@ request:
                             examples: 
                                 - "dev.twitter.com/blog/twitter-c…"
                 User: 
-                    type: model
-                    fields: 
+                    name: User
+                    type: object
+                    props: 
                         profile_sidebar_fill_color: 
                             type: string
                             examples: 
@@ -335,21 +334,23 @@ request:
                             examples: 
                                 - twitterapi
                 Entities 2: 
-                    type: model
-                    fields: 
+                    name: Entities 2
+                    type: object
+                    props: 
                         url: 
                             type: unknown
                         description: 
                             type: unknown
                 Url: 
-                    type: model
-                    fields: 
+                    name: Url
+                    type: object
+                    props: 
                         urls: 
                             type: unknown
-                            array: true
                 Urls 2: 
-                    type: model
-                    fields: 
+                    name: Urls 2
+                    type: object
+                    props: 
                         expanded_url: 
                             type: unknown
                         url: 
@@ -358,29 +359,27 @@ request:
                                 - "http://dev.twitter.com"
                         indices: 
                             type: number
-                            array: true
                             examples: 
                                 - 0
                 Description: 
-                    type: model
-                    fields: 
+                    name: Description
+                    type: object
+                    props: 
                         urls: 
                             type: unknown
-                            array: true
 responses: 
     OK: 
         status: 200
         body: 
-            model: 
-                type: model
-                fields: 
+            typeDef: 
+                type: object
+                props: 
                     total_count: 
                         type: string
                         examples: 
                             - 442
                     icons: 
                         type: Icon
-                        array: true
     123: 
         desc: 123
         status: 312

@@ -1,5 +1,6 @@
-type: envelope
-fields: 
+name: IconSet Envelope
+type: object
+props: 
     total_count: 
         type: string
     iconsets: 

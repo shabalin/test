@@ -1,0 +1,15 @@
+name: Format
+type: object
+props: 
+    preview_url: 
+        type: string
+        examples: 
+            - "https://cdn1.iconfinder.com/data/icons/streamline-business-finance/60/cell-0-12-30.png"
+    download_url: 
+        type: string
+        examples: 
+            - /icons/233366/formats/png/30/download
+    format: 
+        type: string
+        examples: 
+            - png

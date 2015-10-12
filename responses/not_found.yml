@@ -1,0 +1,5 @@
+desc: "The requested resource does not exist or is not publicly available."
+status: 404
+applied_to_all: true
+body: 
+    type: Error model

@@ -1,0 +1,7 @@
+desc: |
+    The request was malformed. The query parameter 
+    `parameter` contains an invalid value.
+status: 400
+applied_to_all: true
+body: 
+    type: Error model

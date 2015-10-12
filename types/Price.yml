@@ -1,10 +1,13 @@
-type: model
-fields: 
+name: Price
+type: object
+props: 
     currency: 
         type: string
-        example: USD
+        examples: 
+            - USD
     price: 
         type: number
-        example: 1
+        examples: 
+            - 1
     license: 
         type: License

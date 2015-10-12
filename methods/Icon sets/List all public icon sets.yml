@@ -5,15 +5,15 @@ responses:
     OK: 
         status: 200
         body: 
+            type: Iconset
             array: true
             envelope: IconSet Envelope
-            type: Iconset
 examples: 
     Get first commercial vector iconset: 
         request: 
             params: 
                 count: 1
-                vector: true
+                vector: "true"
                 license: commercial
         responses: 
             - 
@@ -59,3 +59,4 @@ examples:
                         "name" : "Coloricons 5"
                       } ]
                     }
+

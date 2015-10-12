@@ -5,20 +5,20 @@ responses:
     OK: 
         status: 200
         body: 
-            model: 
-                type: model
-                fields: 
+            typeDef: 
+                type: object
+                props: 
                     styles: 
                         type: Styles
-                        array: true
                     total_count: 
                         type: number
                         examples: 
                             - 9
-                embedded: 
+                nested: 
                     Styles: 
-                        type: model
-                        fields: 
+                        name: Styles
+                        type: object
+                        props: 
                             identifier: 
                                 type: string
                                 examples: 
@@ -75,3 +75,4 @@ examples:
                         ],
                         "total_count": 9
                     }
+

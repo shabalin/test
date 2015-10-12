@@ -1,0 +1,12 @@
+name: IdAndName
+type: object
+desc: "Name - Description pair"
+props: 
+    identifier: 
+        type: string
+        examples: 
+            - outline
+    name: 
+        type: string
+        examples: 
+            - Outline

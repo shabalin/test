@@ -1,0 +1,19 @@
+name: License
+type: object
+props: 
+    url: 
+        type: string
+        examples: 
+            - "https://www.iconfinder.com/licenses/basic"
+    license_id: 
+        type: number
+        examples: 
+            - 71
+    name: 
+        type: string
+        examples: 
+            - Basic license
+    scope: 
+        type: string
+        examples: 
+            - free

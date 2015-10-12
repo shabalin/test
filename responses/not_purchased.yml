@@ -1,0 +1,5 @@
+desc: "The premium resource you're trying to access has not been purchased by the authenticated user."
+status: 403
+applied_to_all: true
+body: 
+    type: Error model

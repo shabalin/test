@@ -1,8 +1,0 @@
-type: error
-fields: 
-    code: 
-        type: string
-        example: not_found
-    message: 
-        type: string
-        example: Not found

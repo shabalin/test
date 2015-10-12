@@ -1,0 +1,108 @@
+name: Iconset
+type: object
+props: 
+    styles: 
+        type: array
+        items:
+            type: IdAndName
+    icons_count: 
+        type: number
+        examples: 
+            - 50
+    author: 
+        type: User
+    is_premium: 
+        type: boolean
+        examples: 
+            - "true"
+    published_at: 
+        type: string
+        examples: 
+            - "2014-05-29T11:38:43.852Z"
+    prices: 
+        type: array
+        items:
+            type: Price
+    identifier: 
+        type: string
+        examples: 
+            - "coloricons-5"
+    type: 
+        type: string
+        examples: 
+            - vector
+    iconset_id: 
+        type: number
+        examples: 
+            - 5411
+    categories: 
+        type: array
+        items:
+            type: IdAndName
+    name: 
+        type: string
+        examples: 
+            - Coloricons 5
+nested: 
+    Author: 
+        name: Author
+        type: object
+        props: 
+            username: 
+                type: string
+                examples: 
+                    - deezign
+            user_id: 
+                type: number
+                examples: 
+                    - 72067
+            name: 
+                type: string
+                examples: 
+                    - Ben Tortorelli
+            company: 
+                type: string
+                examples: 
+                    - Pix3lize
+            is_designer: 
+                type: boolean
+                examples: 
+                    - "true"
+            iconsets_count: 
+                type: number
+                examples: 
+                    - 34
+    Prices: 
+        name: Prices
+        type: object
+        props: 
+            currency: 
+                type: string
+                examples: 
+                    - USD
+            price: 
+                type: number
+                examples: 
+                    - 15
+            license: 
+                type: License
+    License: 
+        name: License
+        type: object
+        props: 
+            url: 
+                type: string
+                examples: 
+                    - "https://www.iconfinder.com/licenses/basic"
+            license_id: 
+                type: number
+                examples: 
+                    - 71
+            name: 
+                type: string
+                examples: 
+                    - Basic license
+            scope: 
+                type: string
+                examples: 
+                    - free

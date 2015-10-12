@@ -1,0 +1,11 @@
+name: Category
+type: object
+props: 
+    identifier: 
+        type: string
+        examples: 
+            - halloween
+    name: 
+        type: string
+        examples: 
+            - Halloween

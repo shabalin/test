@@ -1,0 +1,5 @@
+desc: "API request rate limit exceeded. See `rate limiting`."
+status: 429
+applied_to_all: true
+body: 
+    type: Error model

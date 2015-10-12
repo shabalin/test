@@ -4,33 +4,33 @@ desc: "List all categories sorted ascendingly by their identifier."
 request: 
     params: 
         count: 
-            desc: "Number of categories to include in the result. Accepted values are between 1 and 100. Default 10."
             type: number
+            desc: "Number of categories to include in the result. Accepted values are between 1 and 100. Default 10."
             examples: 
-                - 2
+                - 2.0
         after: 
-            desc: "`identifier` of the last category received. If empty, the `count` first categories are returned."
             type: string
+            desc: "`identifier` of the last category received. If empty, the `count` first categories are returned."
             examples: 
                 - 5
 responses: 
     OK: 
         status: 200
         body: 
-            model: 
-                type: model
-                fields: 
+            typeDef: 
+                type: object
+                props: 
                     total_count: 
                         type: number
                         examples: 
                             - 40
                     categories: 
                         type: Category
-                        array: true
-                embedded: 
+                nested: 
                     Categories: 
-                        type: model
-                        fields: 
+                        name: Categories
+                        type: object
+                        props: 
                             identifier: 
                                 type: string
                                 examples: 
@@ -62,3 +62,4 @@ examples:
                             }
                         ]
                     }
+

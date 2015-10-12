@@ -1,0 +1,5 @@
+desc: "Permission to the requested resource was denied. This often means that a request should have been authenticated but wasn't. dispatched to clean up the mess immediately!"
+status: 403
+applied_to_all: true
+body: 
+    type: Error model

@@ -1,0 +1,127 @@
+name: Icon
+type: object
+props: 
+    raster_sizes: 
+        type: array
+        items:
+            type: RasterSizes
+    styles: 
+        type: array
+        items:
+            type: IdAndName
+    tags: 
+        type: array
+        examples: 
+            - interest
+        items:
+            type: string
+    icon_id: 
+        type: number
+        examples: 
+            - 233366
+    vector_sizes: 
+        type: array
+        items:
+            type: VectorSizes
+    is_premium: 
+        type: boolean
+        examples: 
+            - "true"
+    published_at: 
+        type: string
+        examples: 
+            - "2014-01-24T12:00:14.811Z"
+    containers: 
+        type: array
+        items:
+            type: Format
+    prices: 
+        type: array
+        items:
+            type: Price
+    type: 
+        type: string
+        examples: 
+            - vector
+    categories: 
+        type: array
+        items:
+            type: IdAndName
+    temp: 
+        type: Test enum
+        desc: test enums
+    primiti: 
+        type: unknown
+nested: 
+    RasterSizes: 
+        name: RasterSizes
+        type: object
+        props: 
+            size_width: 
+                type: number
+                examples: 
+                    - 30
+            size_height: 
+                type: number
+                examples: 
+                    - 30
+            formats: 
+                type: array
+                items:
+                    type: Format
+            size: 
+                type: number
+                examples: 
+                    - 30
+    VectorSizes: 
+        name: VectorSizes
+        type: object
+        props: 
+            size_width: 
+                type: number
+                examples: 
+                    - 60
+            size_height: 
+                type: number
+                examples: 
+                    - 60
+            formats: 
+                type: array
+                items:
+                    type: IdAndName
+            target_sizes: 
+                type: array
+                items:
+                    type: TargetSizes
+            size: 
+                type: number
+                examples: 
+                    - 60
+    TargetSizes: 
+        name: TargetSizes
+        type: object
+        props: 
+            0: 
+                type: number
+                examples: 
+                    - 30
+            1: 
+                type: number
+                examples: 
+                    - 60
+            2: 
+                type: number
+                examples: 
+                    - 120
+            3: 
+                type: number
+                examples: 
+                    - 180
+            4: 
+                type: number
+                examples: 
+                    - 240
+            5: 
+                type: number
+                examples: 
+                    - 480

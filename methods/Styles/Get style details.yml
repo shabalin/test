@@ -9,9 +9,9 @@ responses:
     OK: 
         status: 200
         body: 
-            model: 
-                type: model
-                fields: 
+            typeDef: 
+                type: object
+                props: 
                     identifier: 
                         type: string
                         examples: 
@@ -33,3 +33,4 @@ examples:
                       "identifier" : "flat",
                       "name" : "Flat"
                     }
+

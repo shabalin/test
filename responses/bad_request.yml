@@ -1,0 +1,13 @@
+desc: "The request was malformed."
+status: 400
+applied_to_all: true
+body: 
+    type: Error model
+    examples: 
+        - 
+            example: |
+                {
+                    "code": "bad_request",
+                    "message": "The request was malformed."
+                }
+
