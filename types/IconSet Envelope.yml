@@ -1,5 +1,5 @@
 name: IconSet Envelope
-type: object
+type: envelope
 props: 
     total_count: 
         type: string
