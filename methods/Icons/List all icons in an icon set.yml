@@ -10,12 +10,12 @@ desc: "Provides a list of all icons in an icon set sorted descendingly by the po
 request: 
     params: 
         count: 
-            type: number
+            ref: true
             desc: "umber of icons to include in the result. Accepted values are between 1 and 100. Default 10."
             examples: 
                 - 1.0
         after: 
-            type: number
+            ref: true
             desc: "Icon ID of the last icon received. If empty, the count most popular icons are returned."
             examples: 
                 - 1.0
@@ -29,7 +29,7 @@ responses:
                     total_count: 
                         type: number
                         examples: 
-                            - 1
+                            - 1.0
                     icons: 
                         type: Icon
                 nested: 
@@ -48,13 +48,13 @@ responses:
                             icon_id: 
                                 type: number
                                 examples: 
-                                    - 233366
+                                    - 233366.0
                             vector_sizes: 
                                 type: VectorSizes
                             is_premium: 
                                 type: boolean
                                 examples: 
-                                    - "true"
+                                    - true
                             published_at: 
                                 type: string
                                 examples: 
@@ -76,17 +76,17 @@ responses:
                             size_width: 
                                 type: number
                                 examples: 
-                                    - 30
+                                    - 30.0
                             size_height: 
                                 type: number
                                 examples: 
-                                    - 30
+                                    - 30.0
                             formats: 
                                 type: Format
                             size: 
                                 type: number
                                 examples: 
-                                    - 30
+                                    - 30.0
                     Formats: 
                         name: Formats
                         type: object
@@ -122,11 +122,11 @@ responses:
                             size_width: 
                                 type: number
                                 examples: 
-                                    - 60
+                                    - 60.0
                             size_height: 
                                 type: number
                                 examples: 
-                                    - 60
+                                    - 60.0
                             formats: 
                                 type: IdAndName
                             target_sizes: 
@@ -134,7 +134,7 @@ responses:
                             size: 
                                 type: number
                                 examples: 
-                                    - 60
+                                    - 60.0
                     Format: 
                         name: Format
                         type: object
@@ -154,27 +154,27 @@ responses:
                             0: 
                                 type: number
                                 examples: 
-                                    - 30
+                                    - 30.0
                             1: 
                                 type: number
                                 examples: 
-                                    - 60
+                                    - 60.0
                             2: 
                                 type: number
                                 examples: 
-                                    - 120
+                                    - 120.0
                             3: 
                                 type: number
                                 examples: 
-                                    - 180
+                                    - 180.0
                             4: 
                                 type: number
                                 examples: 
-                                    - 240
+                                    - 240.0
                             5: 
                                 type: number
                                 examples: 
-                                    - 480
+                                    - 480.0
                     Prices: 
                         name: Prices
                         type: object
@@ -186,7 +186,7 @@ responses:
                             price: 
                                 type: number
                                 examples: 
-                                    - 1
+                                    - 1.0
                             license: 
                                 type: License
                     License: 
@@ -200,7 +200,7 @@ responses:
                             license_id: 
                                 type: number
                                 examples: 
-                                    - 71
+                                    - 71.0
                             name: 
                                 type: string
                                 examples: 

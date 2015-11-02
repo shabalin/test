@@ -10,7 +10,7 @@ request:
             examples: 
                 - facebook
         count: 
-            type: number
+            ref: true
             desc: "Number of icons to include in the result. Accepted values are between 1 and 100. Default 10."
             examples: 
                 - 1.0
@@ -20,7 +20,7 @@ request:
             examples: 
                 - 1.0
         premium: 
-            type: string
+            ref: true
             desc: |
                 Filter premium icons.
                 
@@ -34,7 +34,7 @@ request:
                 
                 Only include premium icons, that are sold directly on the Iconfinder marketplace.
         vector: 
-            type: string
+            ref: true
             desc: |
                 Filter vector icons.
                 
@@ -47,7 +47,7 @@ request:
             examples: 
                 - all
         license: 
-            type: string
+            ref: true
             desc: |
                 Filter by license scope.
                 
@@ -91,11 +91,11 @@ request:
                 favorited: 
                     type: boolean
                     examples: 
-                        - "false"
+                        - false
                 truncated: 
                     type: boolean
                     examples: 
-                        - "false"
+                        - false
                 created_at: 
                     type: string
                     examples: 
@@ -117,23 +117,23 @@ request:
                 retweet_count: 
                     type: number
                     examples: 
-                        - 121
+                        - 121.0
                 in_reply_to_status_id_str: 
                     type: unknown
                 id: 
                     type: number
                     examples: 
-                        - 240859602684612600
+                        - 2.40859602684612608E17
                 geo: 
                     type: unknown
                 retweeted: 
                     type: boolean
                     examples: 
-                        - "false"
+                        - false
                 possibly_sensitive: 
                     type: boolean
                     examples: 
-                        - "false"
+                        - false
                 in_reply_to_user_id: 
                     type: unknown
                 place: 
@@ -174,7 +174,7 @@ request:
                         indices: 
                             type: number
                             examples: 
-                                - 52
+                                - 52.0
                         display_url: 
                             type: string
                             examples: 
@@ -194,7 +194,7 @@ request:
                         profile_background_tile: 
                             type: boolean
                             examples: 
-                                - "false"
+                                - false
                         name: 
                             type: string
                             examples: 
@@ -214,7 +214,7 @@ request:
                         follow_request_sent: 
                             type: boolean
                             examples: 
-                                - "false"
+                                - false
                         profile_link_color: 
                             type: string
                             examples: 
@@ -222,7 +222,7 @@ request:
                         is_translator: 
                             type: boolean
                             examples: 
-                                - "false"
+                                - false
                         id_str: 
                             type: string
                             examples: 
@@ -232,15 +232,15 @@ request:
                         default_profile: 
                             type: boolean
                             examples: 
-                                - "true"
+                                - true
                         contributors_enabled: 
                             type: boolean
                             examples: 
-                                - "true"
+                                - true
                         favourites_count: 
                             type: number
                             examples: 
-                                - 24
+                                - 24.0
                         url: 
                             type: string
                             examples: 
@@ -252,19 +252,19 @@ request:
                         utc_offset: 
                             type: number
                             examples: 
-                                - "-28800"
+                                - -28800.0
                         id: 
                             type: number
                             examples: 
-                                - 6253282
+                                - 6253282.0
                         profile_use_background_image: 
                             type: boolean
                             examples: 
-                                - "true"
+                                - true
                         listed_count: 
                             type: number
                             examples: 
-                                - 10775
+                                - 10775.0
                         profile_text_color: 
                             type: string
                             examples: 
@@ -276,11 +276,11 @@ request:
                         followers_count: 
                             type: number
                             examples: 
-                                - 1212864
+                                - 1212864.0
                         protected: 
                             type: boolean
                             examples: 
-                                - "false"
+                                - false
                         notifications: 
                             type: unknown
                         profile_background_image_url_https: 
@@ -294,11 +294,11 @@ request:
                         verified: 
                             type: boolean
                             examples: 
-                                - "true"
+                                - true
                         geo_enabled: 
                             type: boolean
                             examples: 
-                                - "true"
+                                - true
                         time_zone: 
                             type: string
                             examples: 
@@ -310,7 +310,7 @@ request:
                         default_profile_image: 
                             type: boolean
                             examples: 
-                                - "false"
+                                - false
                         profile_background_image_url: 
                             type: string
                             examples: 
@@ -318,17 +318,17 @@ request:
                         statuses_count: 
                             type: number
                             examples: 
-                                - 3333
+                                - 3333.0
                         friends_count: 
                             type: number
                             examples: 
-                                - 31
+                                - 31.0
                         following: 
                             type: unknown
                         show_all_inline_media: 
                             type: boolean
                             examples: 
-                                - "false"
+                                - false
                         screen_name: 
                             type: string
                             examples: 
@@ -360,7 +360,7 @@ request:
                         indices: 
                             type: number
                             examples: 
-                                - 0
+                                - 0.0
                 Description: 
                     name: Description
                     type: object

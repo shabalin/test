@@ -4,12 +4,12 @@ desc: "List all categories sorted ascendingly by their identifier."
 request: 
     params: 
         count: 
-            type: number
+            ref: true
             desc: "Number of categories to include in the result. Accepted values are between 1 and 100. Default 10."
             examples: 
                 - 2.0
         after: 
-            type: string
+            ref: true
             desc: "`identifier` of the last category received. If empty, the `count` first categories are returned."
             examples: 
                 - 5
@@ -23,7 +23,7 @@ responses:
                     total_count: 
                         type: number
                         examples: 
-                            - 40
+                            - 40.0
                     categories: 
                         type: Category
                 nested: 
