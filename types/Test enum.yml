@@ -1,5 +1,6 @@
 name: Test enum
-type: enumerated
+type: string
 desc: ewfwef
-values: 
-    wefwef: "_value_ sescription!&#10;"
+enum: 
+    wefwef: 
+        desc: "_value_ sescription!&#10;"
