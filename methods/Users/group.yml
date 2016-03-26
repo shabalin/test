@@ -1,4 +1,3 @@
-desc: "Some thing!"
 methods: 
     - Get user details
     - Get details about the authenticated user
