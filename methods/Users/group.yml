@@ -1,3 +1,4 @@
 methods: 
     - Get user details
     - Get details about the authenticated user
+    - "new-method"
