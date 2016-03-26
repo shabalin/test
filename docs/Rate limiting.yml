@@ -1,0 +1,78 @@
+content: |
+    The Iconfinder API version 2.0 employs strict rate limiting depending on the authentication method. 
+    For `OAuth 2.0` authenticated requests, you can make up to 5,000 requests per hour for each authorized user. 
+    For unautheticated requests, you can make 15 requests per minute.
+    
+    > Rate limits may change during the beta period of Iconfinder API version 2.0.
+    
+    Not all requests count towards your request rate. Using [conditional requests](https://developer.iconfinder.com/api/2.0/overview.html#conditional-requests) to ease the load on Iconfinder's servers will only count towards your request rate if a resource has changed.
+    
+    All responses from the API contain information about the current state of rate limiting:
+    
+    ```
+    $ curl -i https://api.iconfinder.com/v2/iconsets
+    
+    HTTP/1.1 200 OK
+    Date: Mon, 21 Apr 2014 13:26:48 GMT
+    Content-Type: application/json; charset=utf-8
+    Connection: keep-alive
+    X-RateLimit-Limit: 15
+    X-RateLimit-Remaining: 14
+    X-RateLimit-Reset: Mon, 21 Apr 2014 13:27:48 GMT
+    ```
+    
+    The special `X-RateLimit-` headers have the following meaning:
+    
+    | Header name        | Description           |
+    | ------------- | ------------- |
+    | `X-RateLimit-Limit`      | Current rate limit for the authentication method used. |
+    | `X-RateLimit-Remaining`      | Requests remaining until rate limit is reached.      |
+    | `X-RateLimit-Reset`      | Time at which the request counter is reset.     |
+    
+    
+    ### Hitting the wall
+    
+    If you exceed the request rate limit, the Iconfinder API will return a `429 Too Many Requests`
+    response code with the following content:
+    
+    ```
+    $ curl -i https://api.iconfinder.com/v2/iconsets
+    
+    HTTP/1.1 429 Too Many Requests
+    Date: Mon, 21 Apr 2014 13:27:04 GMT
+    Content-Type: application/json; charset=utf-8
+    Connection: keep-alive
+    X-RateLimit-Limit: 15
+    X-RateLimit-Remaining: 0
+    X-RateLimit-Reset: Mon, 21 Apr 2014 13:27:48 GMT
+    
+    {
+        "code": "rate_limit_exceeded",
+        "message": "API rate limit exceeded"
+    }
+    ```
+    
+      
+    If you need a higher rate limit, please contact [support](mailto:support@iconfinder.com) with details about your use case.
+    
+    ### Unauthenticated requests with higher rate limit
+    
+    
+    If you need to make unauthenticated requests to the API with a higher rate limit, 
+    you can send the client ID and secret of your API application along with the request. 
+    The rate limit will then be the same as for an authenticated request, 
+    but the limit is applied at an application level rather than authorization level:
+    
+    ```http
+    $ curl -i https://api.iconfinder.com/v2/iconsets?client_id=x&client_secret=y
+    
+    HTTP/1.1 200 OK
+    Date: Mon, 21 Apr 2014 13:26:48 GMT
+    Content-Type: application/json; charset=utf-8
+    Connection: keep-alive
+    X-RateLimit-Limit: 5000
+    X-RateLimit-Remaining: 4999
+    X-RateLimit-Reset: Mon, 21 Apr 2014 13:27:48 GMT
+    ```
+    > Only use this method for server-to-server calls. **Never** share your application's 
+    client secret with anyone or include it in client-side browser code.

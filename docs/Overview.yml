@@ -1,0 +1,14 @@
+content: |
+    > This is **not official** version of Iconfinder REST API v2.0 (beta)  
+    > Link to [Official documentation](https://developer.iconfinder.com/api/2.0/index.html)
+    
+    All API access is performed over HTTPS and accessed from the `api.iconfinder.com` domain. 
+    The API version 2.0 is accessed under the `v2/` subpath. 
+    This means that the full base path of all the REST API 2.0 
+    endpoints is `https://api.iconfinder.com/v2/`, although throughout the documentation 
+    this is shortened to `/v2/`.
+    
+    Usage of the Iconfinder API version 2.0 is subject to the [API terms of service](https://developer.iconfinder.com/api/2.0/terms.html#terms).
+    
+    > The Iconfinder API version 2.0 is currently in beta. We will do our best to avoid 
+    breaking changes, but consider the current version unstable at the moment.
