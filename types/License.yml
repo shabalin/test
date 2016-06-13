@@ -1,4 +1,5 @@
-name: License
+!type
+id: License
 type: object
 props: 
     url: 

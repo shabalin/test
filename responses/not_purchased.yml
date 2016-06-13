@@ -1,3 +1,6 @@
+!response
+id: not_purchased_response
+name: not_purchased
 desc: "The premium resource you're trying to access has not been purchased by the authenticated user."
 status: 403
 applied_to_all: true

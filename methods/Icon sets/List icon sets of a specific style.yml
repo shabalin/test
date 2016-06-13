@@ -1,3 +1,6 @@
+!method
+id: "list-icon-sets-of-a-specific-style"
+name: List icon sets of a specific style
 method: GET
 path: "/styles/{style identifier}/iconsets"
 path_vars: 

@@ -1,3 +1,6 @@
+!response
+id: bad_request_response
+name: bad_request
 desc: "The request was malformed."
 status: 400
 applied_to_all: true

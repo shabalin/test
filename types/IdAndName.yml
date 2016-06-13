@@ -1,4 +1,5 @@
-name: IdAndName
+!type
+id: IdAndName
 type: object
 desc: "Name - Description pair"
 props: 

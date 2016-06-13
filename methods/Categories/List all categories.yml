@@ -1,14 +1,17 @@
+!method
+id: "list-all-categories"
+name: List all categories
 method: GET
 path: /categories
 desc: "List all categories sorted ascendingly by their identifier."
 request: 
     params: 
-        count: 
+        count_param: 
             ref: true
             desc: "Number of categories to include in the result. Accepted values are between 1 and 100. Default 10."
             examples: 
                 - 2.0
-        after: 
+        after_param: 
             ref: true
             desc: "`identifier` of the last category received. If empty, the `count` first categories are returned."
             examples: 
@@ -28,7 +31,6 @@ responses:
                         type: Category
                 nested: 
                     Categories: 
-                        name: Categories
                         type: object
                         props: 
                             identifier: 
@@ -43,7 +45,7 @@ examples:
     Example: 
         request: 
             params: 
-                count: 2
+                count_param: 2
         responses: 
             - 
                 response_name: OK

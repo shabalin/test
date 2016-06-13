@@ -1,2 +1,4 @@
+!group
+id: authors_group
+name: Authors
 desc: 'Content on Iconfinder is always associated with a _creator_, ie. an entity of some sort, that has created the content. But, because Iconfinder both indexes as well as allows content creators to upload their works, not all content is linked to a known user, who created the content. Instead, indexed content created by someone who is not a user on Iconfinder will be represented as the special "author" type rather than the normal user type.'
-methods: [Get author details]

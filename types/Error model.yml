@@ -1,4 +1,5 @@
-name: Error model
+!type
+id: Error model
 type: object
 props: 
     code: 

@@ -1,3 +1,6 @@
+!method
+id: "list-icon-sets-in-a-category"
+name: List icon sets in a category
 method: GET
 path: "/categories/{category identifier}/iconsets"
 path_vars: 

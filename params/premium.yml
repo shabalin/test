@@ -1,0 +1,15 @@
+!param
+id: premium_param
+name: premium
+type: string
+desc: |
+    Filter premium icon sets.
+    
+    `all` or **empty value**
+    Include all icon sets no matter if they are premium or not.  
+    `0` or `false`
+    Only include icon sets that are not premium, ie. may require purchasing a license for specific use cases but are not sold directly on the Iconfinder marketplace.  
+    `1` or `true`
+    Only include premium icon sets, that are sold directly on the Iconfinder marketplace.
+examples: 
+    - qer

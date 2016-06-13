@@ -1,3 +1,6 @@
+!method
+id: "get-author-details"
+name: Get author details
 method: GET
 path: "/authors/{author id}"
 path_vars: 

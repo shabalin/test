@@ -1,3 +1,6 @@
+!response
+id: "invalid_-parameter_response"
+name: "invalid_<parameter>"
 desc: |
     The request was malformed. The query parameter 
     `parameter` contains an invalid value.

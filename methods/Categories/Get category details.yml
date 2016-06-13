@@ -1,3 +1,6 @@
+!method
+id: "get-category-details"
+name: Get category details
 method: GET
 path: "/categories/{category identifier}"
 path_vars: 

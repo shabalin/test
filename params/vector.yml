@@ -1,0 +1,15 @@
+!param
+id: vector_param
+name: vector
+type: string
+desc: |
+    Filter vector icon sets.
+    
+    `all` or **empty value**
+    Include all icon sets no matter if they are vector or raster icon sets.  
+    `0` or `false`
+    Only include raster icon sets in the result.  
+    `1` or `true`
+    Only include vector icon sets in the result.
+examples: 
+    - all

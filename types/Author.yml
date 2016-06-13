@@ -1,4 +1,5 @@
-name: Author
+!type
+id: Author
 type: object
 desc: "See [Format Model](model://Format) **bold**"
 props: 

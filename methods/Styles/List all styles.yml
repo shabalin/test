@@ -1,3 +1,6 @@
+!method
+id: "list-all-styles"
+name: List all styles
 method: GET
 path: /styles
 desc: "List all styles sorted ascendingly by their identifier."
@@ -16,7 +19,6 @@ responses:
                             - 9
                 nested: 
                     Styles: 
-                        name: Styles
                         type: object
                         props: 
                             identifier: 

@@ -1,3 +1,6 @@
+!method
+id: "begin-the-authorization-flow"
+name: Begin the authorization flow
 method: GET
 path: /oauth2/authorize
 desc: The method is used to begin the authorization flow

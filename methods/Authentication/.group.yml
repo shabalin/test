@@ -1,3 +1,6 @@
+!group
+id: authentication_group
+name: Authentication
 desc: |
     The Iconfinder REST API 2.0 offers both a public and a private part of the API. 
     The public part includes the basic functionality, one would experience as a user of Iconfinder without being logged in. 
@@ -21,7 +24,7 @@ desc: |
     
     ### Web application authorization flow
     
-    1. Redirect the user to Iconfinder to authorize your application [Begin the authorization flow](method://Begin the authorization flow)
+    1. Redirect the user to Iconfinder to authorize your application [Begin the authorization flow](speca://begin-the-authorization-flow)
        > Web application authorization flows can only be performed for applications registered with a valid callback URL. If you have not provided a callback URL, the authorization endpoint on Iconfinder will display an error to the user.
     
     2. Iconfinder redirects back to your site
@@ -31,7 +34,7 @@ desc: |
     
     3. Exchange the intermediate code for an access token
        Once you have the intermediate code, it must be exchanged for an access token that will be used
-       for all authenticated requests. [Obtain access token](method://Obtain access token)
+       for all authenticated requests. [Obtain access token](speca://obtain-access-token)
     
        Extract intermediate authorization code from the redirect request and obtain access token  
        
@@ -75,4 +78,3 @@ desc: |
     | default     | Read-only access to a user's public information. |
     | `user`   | Read-only access to a user's private information such as e-mail address etc. |
     | `purchased`      | Read access to a user's purchased premium resources. Required to be able to download premium icons on behalf of the user. |
-methods: [Begin the authorization flow, Obtain access token]

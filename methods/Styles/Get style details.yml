@@ -1,3 +1,6 @@
+!method
+id: "get-style-details"
+name: Get style details
 method: GET
 path: "/styles/{style identifier}"
 path_vars: 

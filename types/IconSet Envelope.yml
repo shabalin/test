@@ -1,4 +1,5 @@
-name: IconSet Envelope
+!type
+id: IconSet Envelope
 type: envelope
 props: 
     total_count: 

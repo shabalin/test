@@ -1,3 +1,6 @@
+!method
+id: "list-a-user-s-icon-sets"
+name: "List a user's icon sets"
 method: GET
 path: "/v2/users/{userid or username}/iconsets"
 path_vars: 

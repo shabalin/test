@@ -1,3 +1,6 @@
+!doc
+id: "data-transmission_doc"
+name: Data transmission
 content: |
     All data is sent as UTF-8 encoded JSON identified by the media type `application/json`.
     

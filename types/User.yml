@@ -1,4 +1,5 @@
-name: User
+!type
+id: User
 type: object
 desc: "[See docs](doc://Data transmission sdfwef)"
 props: 
@@ -25,7 +26,7 @@ props:
     is_designer: 
         type: boolean
         examples: 
-            - "true"
+            - true
     location: 
         type: string
         examples: 

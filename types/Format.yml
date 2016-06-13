@@ -1,4 +1,5 @@
-name: Format
+!type
+id: Format
 type: object
 props: 
     preview_url: 

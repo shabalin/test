@@ -1,0 +1,7 @@
+!param
+id: after_param
+name: after
+type: number
+desc: "Icon set ID of the last icon set received. If empty, the `count` most recently published icon sets are returned."
+examples: 
+    - 100.0

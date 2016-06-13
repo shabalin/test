@@ -1,3 +1,6 @@
+!method
+id: "list-all-public-icon-sets"
+name: List all public icon sets
 method: GET
 path: /iconsets
 desc: "List all public icon sets in descending order of when they were published."
@@ -12,9 +15,9 @@ examples:
     Get first commercial vector iconset: 
         request: 
             params: 
-                count: 1
-                vector: "true"
-                license: commercial
+                count_param: 1
+                vector_param: "true"
+                license_param: commercial
         responses: 
             - 
                 response_name: OK

@@ -1,4 +1,5 @@
-name: Category
+!type
+id: Category
 type: object
 props: 
     identifier: 

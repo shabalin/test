@@ -1,4 +1,5 @@
-name: Price
+!type
+id: Price
 type: object
 props: 
     currency: 

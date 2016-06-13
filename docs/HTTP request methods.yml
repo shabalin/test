@@ -1,3 +1,6 @@
+!doc
+id: "http-request-methods_doc"
+name: HTTP request methods
 content: |
     Where possible, the Iconfinder REST API strives to use appropriate HTTP methods for each action:
     

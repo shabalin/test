@@ -1,9 +1,0 @@
-- bad_request
-- "invalid_<parameter>"
-- bad_credentials
-- permission_denied
-- insufficient_permissions
-- not_purchased
-- not_found
-- rate_limit_exceeded
-- server_error

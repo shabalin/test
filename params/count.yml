@@ -1,0 +1,7 @@
+!param
+id: count_param
+name: count
+type: number
+desc: "Number of icon sets to include in the result. Accepted values are between 1 and 100. Default 10."
+examples: 
+    - 50.0

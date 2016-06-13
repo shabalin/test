@@ -1,3 +1,6 @@
+!method
+id: "list-an-author-s-icon-sets"
+name: "List an author's icon sets"
 method: GET
 path: "/authors/{author id}/iconsets"
 path_vars: 

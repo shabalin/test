@@ -1,3 +1,6 @@
+!method
+id: "search-for-icons"
+name: Search for icons
 method: POST
 path: /icons/search
 desc: "Search through icons by various criteria. The returned list of icons is ordered descendingly by popularity."
@@ -9,7 +12,7 @@ request:
             required: true
             examples: 
                 - facebook
-        count: 
+        count_param: 
             ref: true
             desc: "Number of icons to include in the result. Accepted values are between 1 and 100. Default 10."
             examples: 
@@ -19,7 +22,7 @@ request:
             desc: "Result offset. Starts from 0, resulting in the first count icons being returned."
             examples: 
                 - 1.0
-        premium: 
+        premium_param: 
             ref: true
             desc: |
                 Filter premium icons.
@@ -33,7 +36,7 @@ request:
                 `1` or `true`
                 
                 Only include premium icons, that are sold directly on the Iconfinder marketplace.
-        vector: 
+        vector_param: 
             ref: true
             desc: |
                 Filter vector icons.
@@ -46,7 +49,7 @@ request:
                 Only include vector icons in the search result.
             examples: 
                 - all
-        license: 
+        license_param: 
             ref: true
             desc: |
                 Filter by license scope.
@@ -150,7 +153,6 @@ request:
                     type: unknown
             nested: 
                 Entities: 
-                    name: Entities
                     type: object
                     props: 
                         urls: 
@@ -160,7 +162,6 @@ request:
                         user_mentions: 
                             type: unknown
                 Urls: 
-                    name: Urls
                     type: object
                     props: 
                         expanded_url: 
@@ -180,7 +181,6 @@ request:
                             examples: 
                                 - "dev.twitter.com/blog/twitter-c…"
                 User: 
-                    name: User
                     type: object
                     props: 
                         profile_sidebar_fill_color: 
@@ -334,7 +334,6 @@ request:
                             examples: 
                                 - twitterapi
                 Entities 2: 
-                    name: Entities 2
                     type: object
                     props: 
                         url: 
@@ -342,13 +341,11 @@ request:
                         description: 
                             type: unknown
                 Url: 
-                    name: Url
                     type: object
                     props: 
                         urls: 
                             type: unknown
                 Urls 2: 
-                    name: Urls 2
                     type: object
                     props: 
                         expanded_url: 
@@ -362,7 +359,6 @@ request:
                             examples: 
                                 - 0.0
                 Description: 
-                    name: Description
                     type: object
                     props: 
                         urls: 

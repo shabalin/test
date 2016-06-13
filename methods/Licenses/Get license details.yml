@@ -1,3 +1,6 @@
+!method
+id: "get-license-details"
+name: Get license details
 method: GET
 path: "/licenses/{license id}"
 path_vars: 

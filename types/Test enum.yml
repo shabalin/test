@@ -1,4 +1,5 @@
-name: Test enum
+!type
+id: Test enum
 type: string
 desc: ewfwef
 enum: 

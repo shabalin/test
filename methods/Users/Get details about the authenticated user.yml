@@ -1,3 +1,6 @@
+!method
+id: "get-details-about-the-authenticated-user"
+name: Get details about the authenticated user
 method: GET
 path: /user
 desc: "When using OAuth 2.0 authentication, this endpoint exposes details about the authenticated user. The level of detail depends on the scope with which the user was authenticated."

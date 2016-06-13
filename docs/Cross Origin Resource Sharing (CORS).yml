@@ -1,3 +1,6 @@
+!doc
+id: "cross-origin-resource-sharing-cors_doc"
+name: "Cross Origin Resource Sharing (CORS)"
 content: |
     The Iconfinder API version 2.0 supports [Cross Origin Resource Sharing (CORS)](http://www.w3.org/TR/cors/) for AJAX requests, 
     independent of the request origin.

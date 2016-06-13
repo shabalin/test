@@ -1,0 +1,15 @@
+!param
+id: license_param
+name: license
+type: string
+desc: |
+    Filter by license scope.
+    
+    `none` or **empty value**
+    Include all icon sets no matter the license.  
+    `commercial`
+    Only include icon sets that can be used commercially, but may require attribution or be restricted by other licensing concerns.  
+    `commercial-nonattribution`
+    Only include icon sets that be used commercially without any attribution requirements.
+examples: 
+    - commercial

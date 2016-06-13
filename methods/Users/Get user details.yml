@@ -1,3 +1,6 @@
+!method
+id: "get-user-details"
+name: Get user details
 method: GET
 path: "/users/{userid or username}"
 path_vars: 
@@ -18,11 +21,11 @@ examples:
             userid or username: webalys
         request: 
             params: 
-                count: 50
-                after: 100
-                premium: qer
-                vector: all
-                license: commercial
+                count_param: 50
+                after_param: 100
+                premium_param: qer
+                vector_param: all
+                license_param: commercial
         responses: 
             - 
                 response_name: OK

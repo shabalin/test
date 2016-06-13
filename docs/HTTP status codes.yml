@@ -1,3 +1,6 @@
+!doc
+id: "http-status-codes_doc"
+name: HTTP status codes
 content: |
     The following status codes will be sent from the Iconfinder REST API:  
     

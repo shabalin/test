@@ -1,3 +1,6 @@
+!method
+id: "get-details-about-a-specific-icon-set"
+name: "Get details about a specific icon set."
 method: GET
 path: "/iconsets/{icon set id or identifier}"
 path_vars: 

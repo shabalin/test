@@ -1,3 +1,6 @@
+!method
+id: "obtain-access-token"
+name: Obtain access token
 method: GET
 path: /oauth2/token
 desc: "Once you have the intermediate code, it must be exchanged for an access token that will be used for all authenticated requests. Access tokens are obtained at the following URL:"

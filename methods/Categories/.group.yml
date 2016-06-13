@@ -1,5 +1,7 @@
+!group
+id: categories_group
+name: Categories
 desc: |
     ns can depict virtually anything and have many different use cases, and it can therefore be difficult to find just the icons you need. On Iconfinder, apart from being tagged, icons and icon sets are assigned to at least one of a predefined set of categories to make it easier to find icons based on use case.
     
     Categories on Iconfinder are identified in the API by their unique, humanly readable `identifier` rather than a numerical ID.
-methods: [List all categories, Get category details]

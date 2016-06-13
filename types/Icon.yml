@@ -1,4 +1,5 @@
-name: Icon
+!type
+id: Icon
 type: object
 props: 
     raster_sizes: 
@@ -26,7 +27,7 @@ props:
     is_premium: 
         type: boolean
         examples: 
-            - "true"
+            - true
     published_at: 
         type: string
         examples: 
@@ -54,7 +55,6 @@ props:
         type: unknown
 nested: 
     RasterSizes: 
-        name: RasterSizes
         type: object
         props: 
             size_width: 
@@ -74,7 +74,6 @@ nested:
                 examples: 
                     - 30
     VectorSizes: 
-        name: VectorSizes
         type: object
         props: 
             size_width: 
@@ -98,7 +97,6 @@ nested:
                 examples: 
                     - 60
     TargetSizes: 
-        name: TargetSizes
         type: object
         props: 
             0: 

@@ -1,3 +1,6 @@
+!response
+id: not_found_response
+name: not_found
 desc: "The requested resource does not exist or is not publicly available."
 status: 404
 applied_to_all: true

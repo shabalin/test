@@ -1,3 +1,6 @@
+!response
+id: server_error_response
+name: server_error
 desc: "An internal server error occured. This shouldn't happen, and robots will be dispatched to deal with it immediately."
 status: 500
 applied_to_all: true

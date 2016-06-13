@@ -1,4 +1,5 @@
-name: SearchforiconsRequest
+!type
+id: SearchforiconsRequest
 type: object
 desc: ewf
 props: 
@@ -7,11 +8,11 @@ props:
     favorited: 
         type: boolean
         examples: 
-            - "false"
+            - false
     truncated: 
         type: boolean
         examples: 
-            - "false"
+            - false
     created_at: 
         type: string
         examples: 
@@ -45,11 +46,11 @@ props:
     retweeted: 
         type: boolean
         examples: 
-            - "false"
+            - false
     possibly_sensitive: 
         type: boolean
         examples: 
-            - "false"
+            - false
     in_reply_to_user_id: 
         type: unknown
     place: 
@@ -66,7 +67,6 @@ props:
         type: unknown
 nested: 
     Entities: 
-        name: Entities
         type: object
         props: 
             urls: 
@@ -82,7 +82,6 @@ nested:
                 items:
                     type: unknown
     Urls: 
-        name: Urls
         type: object
         props: 
             expanded_url: 
@@ -104,7 +103,6 @@ nested:
                 examples: 
                     - "dev.twitter.com/blog/twitter-c…"
     User: 
-        name: User
         type: object
         props: 
             profile_sidebar_fill_color: 
@@ -118,7 +116,7 @@ nested:
             profile_background_tile: 
                 type: boolean
                 examples: 
-                    - "false"
+                    - false
             name: 
                 type: string
                 examples: 
@@ -138,7 +136,7 @@ nested:
             follow_request_sent: 
                 type: boolean
                 examples: 
-                    - "false"
+                    - false
             profile_link_color: 
                 type: string
                 examples: 
@@ -146,7 +144,7 @@ nested:
             is_translator: 
                 type: boolean
                 examples: 
-                    - "false"
+                    - false
             id_str: 
                 type: string
                 examples: 
@@ -156,11 +154,11 @@ nested:
             default_profile: 
                 type: boolean
                 examples: 
-                    - "true"
+                    - true
             contributors_enabled: 
                 type: boolean
                 examples: 
-                    - "true"
+                    - true
             favourites_count: 
                 type: number
                 examples: 
@@ -176,7 +174,7 @@ nested:
             utc_offset: 
                 type: number
                 examples: 
-                    - "-28800"
+                    - -28800
             id: 
                 type: number
                 examples: 
@@ -184,7 +182,7 @@ nested:
             profile_use_background_image: 
                 type: boolean
                 examples: 
-                    - "true"
+                    - true
             listed_count: 
                 type: number
                 examples: 
@@ -204,7 +202,7 @@ nested:
             protected: 
                 type: boolean
                 examples: 
-                    - "false"
+                    - false
             notifications: 
                 type: unknown
             profile_background_image_url_https: 
@@ -218,11 +216,11 @@ nested:
             verified: 
                 type: boolean
                 examples: 
-                    - "true"
+                    - true
             geo_enabled: 
                 type: boolean
                 examples: 
-                    - "true"
+                    - true
             time_zone: 
                 type: string
                 examples: 
@@ -234,7 +232,7 @@ nested:
             default_profile_image: 
                 type: boolean
                 examples: 
-                    - "false"
+                    - false
             profile_background_image_url: 
                 type: string
                 examples: 
@@ -252,13 +250,12 @@ nested:
             show_all_inline_media: 
                 type: boolean
                 examples: 
-                    - "false"
+                    - false
             screen_name: 
                 type: string
                 examples: 
                     - twitterapi
     Entities 2: 
-        name: Entities 2
         type: object
         props: 
             url: 
@@ -266,7 +263,6 @@ nested:
             description: 
                 type: unknown
     Url: 
-        name: Url
         type: object
         props: 
             urls: 
@@ -274,7 +270,6 @@ nested:
                 items:
                     type: unknown
     Urls 2: 
-        name: Urls 2
         type: object
         props: 
             expanded_url: 
@@ -290,7 +285,6 @@ nested:
                 items:
                     type: number
     Description: 
-        name: Description
         type: object
         props: 
             urls: 
